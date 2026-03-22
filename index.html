@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Viewer</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <style>
+      html {
+        width: 100%;
+        height: 100%;
+      }
+      .player {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="player.js"></script>
+    <div class="player" id="player"></div>
+    <script>
+      var getRightBoolean = function(value) {
+        if (value === 'true') {
+          return true
+        }
+        if (value === 'false') {
+          return false
+        }
+        return value
+      }
+      var getRightUndefined = function(value) {
+        return value === undefined ? true : value
+      }
+      var getRightArray = function(value) {
+        return typeof value === 'string' && value.indexOf(',') > -1
+          ? value.split(',')
+          : value
+      }
+      var getRightOptionValue = function(name, value) {
+        value = getRightArray(value)
+        value = getRightBoolean(value)
+        value = getRightUndefined(value)
+        return value
+      }
+      var getRightOptionName = function(name) {
+        var aliases = {
+          u: 'isMLS',
+          debug: 'isDebug',
+          'start-help': 'isStartHelp',
+          'dynamic-focus': 'isDynamicFocus',
+          'attraction-mode': 'isAttractionMode',
+          mesh: 'tour',
+          'content-path': 'contentPathPrefix',
+          'user-regions': 'generateUserRegions',
+          'atlas-mipmap': 'atlasMipmap',
+          'show-bbox': 'showBBox',
+          'splash-path': 'splashPath',
+          'texture-quality': 'textureQuality',
+          'tile-min-lod': 'tileMinLod',
+          'tile-max-lod': 'tileMaxLod',
+          'manual-start': 'manualStart',
+        }
+        return aliases[name] ? aliases[name] : name
+      }
+      var isDebugOptionName = function(name) {
+        return name.indexOf('Debug.') === 0
+      }
+      var isConfigOptionName = function(name) {
+        return name.indexOf('config.') === 0
+      }
+
+      var options = {
+        dangerouslyRunUserScripts: true,
+      }
+      var debugOptions = {}
+      var configOptions = {}
+      var params = window.location.search.substring(1).split('&')
+
+      for (var i = 0; i < params.length; i++) {
+        var pair = params[i].split('=')
+        var optionName = pair[0]
+        if (optionName.length > 0) {
+          var optionValue = pair[1]
+          optionName = getRightOptionName(optionName)
+          optionValue = decodeURIComponent(optionValue)
+          optionValue = getRightOptionValue(optionName, optionValue)
+          if (isDebugOptionName(optionName)) {
+            debugOptions[optionName.replace('Debug.', '')] = optionValue
+          } else if (isConfigOptionName(optionName)) {
+            var v = optionValue
+            if (v !== true && v !== false && !isNaN(+v)) {
+              optionValue = +v
+            }
+            configOptions[optionName.replace('config.', '')] = optionValue
+          } else {
+            options[optionName] = optionValue
+          }
+        }
+      }
+
+      if ('defaultCameraDirection' in options) {
+        try {
+          options['defaultCameraDirection'] = JSON.parse(
+            options['defaultCameraDirection']
+          )
+          if (options['defaultCameraDirection'].length !== 3) {
+            throw new Error()
+          }
+        } catch (e) {
+          console.warn(
+            'The default-camera-direction parameter has to be an array. For example: "default-camera-direction:[0,0,1]"'
+          )
+        }
+      }
+
+      var playerElement = document.getElementById('player')
+
+      window.player = new GCVPlayer(
+        playerElement,
+        options,
+        debugOptions,
+        configOptions
+      )
+      window.player.ready(function() {
+        var canvas = document.querySelector('#player canvas')
+        if (canvas) {
+          canvas.style.transform = 'scaleX(-1)'
+        }
+      })
+    </script>
+  </body>
+</html>

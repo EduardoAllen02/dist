@@ -1,0 +1,1 @@
+start chrome.exe "file://%cd:\=/%/index.html?offline&local-model&mesh=%~n1" --user-data-dir="C://Chrome dev session" --disable-web-security
