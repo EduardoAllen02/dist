@@ -127,57 +127,60 @@
         configOptions
       )
       window.player.ready(function() {
-  var canvas = document.querySelector('#player canvas');
-  if (!canvas) return;
+        var canvas = document.querySelector('#player canvas');
+        if (!canvas) return;
 
-  var isFloorPlan = false;
-  var isFiring = false;
+        var isFloorPlan = false;
+        var isFiring = false;
 
-  canvas.addEventListener('mousemove', function(e) {
-    if (!isFloorPlan) return;
-    if (isFiring) return;
+        canvas.addEventListener('pointermove', function(e) {
+          if (!isFloorPlan) return;
+          if (isFiring) return;
 
-    e.stopImmediatePropagation();
+          e.stopImmediatePropagation();
 
-    isFiring = true;
-    canvas.dispatchEvent(new MouseEvent('mousemove', {
-      bubbles:    true,
-      cancelable: true,
-      clientX:    e.clientX  + (e.movementX * -2),
-      clientY:    e.clientY  + (e.movementY * -2),
-      movementX:  -e.movementX,
-      movementY:  -e.movementY,
-      button:     e.button,
-      buttons:    e.buttons,
-    }));
-    isFiring = false;
+          isFiring = true;
+          canvas.dispatchEvent(new PointerEvent('pointermove', {
+            bubbles:     true,
+            cancelable:  true,
+            clientX:     e.clientX + (e.movementX * -2),
+            clientY:     e.clientY + (e.movementY * -2),
+            movementX:   -e.movementX,
+            movementY:   -e.movementY,
+            button:      e.button,
+            buttons:     e.buttons,
+            pointerId:   e.pointerId,
+            pointerType: e.pointerType,
+            pressure:    e.pressure,
+          }));
+          isFiring = false;
 
-  }, true);
+        }, true);
 
-  var interval = setInterval(function() {
-    var walkingBtn = document.querySelector('span[title="Walking Mode"]');
-    var btn3D      = document.querySelector('span[title="3D Mode"]');
-    var floorBtn   = document.querySelector('span[title="Floor Plan Mode"]');
-    if (!walkingBtn || !btn3D || !floorBtn) return;
-    clearInterval(interval);
+        var interval = setInterval(function() {
+          var walkingBtn = document.querySelector('span[title="Walking Mode"]');
+          var btn3D      = document.querySelector('span[title="3D Mode"]');
+          var floorBtn   = document.querySelector('span[title="Floor Plan Mode"]');
+          if (!walkingBtn || !btn3D || !floorBtn) return;
+          clearInterval(interval);
 
-    floorBtn.addEventListener('click', function() {
-      isFloorPlan = true;
-      canvas.style.transition = 'transform 0.4s ease';
-      canvas.style.transform  = 'rotate(180deg)';
-    });
+          floorBtn.addEventListener('click', function() {
+            isFloorPlan = true;
+            canvas.style.transition = 'transform 0.4s ease';
+            canvas.style.transform  = 'rotate(180deg)';
+          });
 
-    function exitFloorPlan() {
-      isFloorPlan = false;
-      canvas.style.transition = 'transform 0.4s ease';
-      canvas.style.transform  = 'none';
-    }
+          function exitFloorPlan() {
+            isFloorPlan = false;
+            canvas.style.transition = 'transform 0.4s ease';
+            canvas.style.transform  = 'none';
+          }
 
-    walkingBtn.addEventListener('click', exitFloorPlan);
-    btn3D.addEventListener('click', exitFloorPlan);
+          walkingBtn.addEventListener('click', exitFloorPlan);
+          btn3D.addEventListener('click', exitFloorPlan);
 
-  }, 200);
-});
+        }, 200);
+      });
     </script>
   </body>
 </html>
