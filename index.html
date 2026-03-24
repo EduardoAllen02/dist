@@ -127,25 +127,46 @@
         configOptions
       )
       window.player.ready(function() {
-        var playerEl = document.getElementById('player');
-        
-        // Rotamos el player (solo afecta el canvas, fn-root es fixed y no se mueve)
-        playerEl.style.transform = 'rotate(180deg)';
+        var canvas = document.querySelector('#player canvas');
+        if (!canvas) return;
 
-        // Compensar el drag invertido en modo 3D
-        var canvas = playerEl.querySelector('canvas');
-        if (canvas) {
-          canvas.addEventListener('mousemove', function(e) {
-            // Con rotate(180deg), movementX y movementY quedan invertidos
-            // Los redefinimos antes de que el motor 3D los lea
-            try {
-              Object.defineProperty(e, 'movementX', { get: function(){ return -e._mx }, configurable: true });
-              Object.defineProperty(e, 'movementY', { get: function(){ return -e._my }, configurable: true });
-              e._mx = e.movementX || 0;
-              e._my = e.movementY || 0;
-            } catch(err) {}
-          }, true); // capture=true para interceptar antes que el motor
-        }
+        // Rotar solo el canvas
+        canvas.style.transform = 'rotate(180deg)';
+        canvas.style.transformOrigin = 'center center';
+
+        // Interceptar eventos ANTES de que el motor los lea (capture phase)
+        var events = ['mousedown','mouseup','mousemove','click','dblclick','wheel'];
+        
+        events.forEach(function(eventName) {
+          canvas.addEventListener(eventName, function(e) {
+            var rect = canvas.getBoundingClientRect();
+            var centerX = rect.left + rect.width / 2;
+            var centerY = rect.top + rect.height / 2;
+            
+            // Para 180°: reflejar coordenadas respecto al centro
+            var newClientX = 2 * centerX - e.clientX;
+            var newClientY = 2 * centerY - e.clientY;
+
+            // Crear evento corregido
+            var corrected = new e.constructor(eventName, {
+              bubbles: e.bubbles,
+              cancelable: e.cancelable,
+              clientX: newClientX,
+              clientY: newClientY,
+              movementX: -e.movementX,
+              movementY: -e.movementY,
+              button: e.button,
+              buttons: e.buttons,
+              deltaX: e.deltaX,
+              deltaY: e.deltaY,
+              deltaMode: e.deltaMode,
+            });
+
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            canvas.dispatchEvent(corrected);
+          }, true); // capture = true, intercepta primero
+        });
       });
     </script>
   </body>
