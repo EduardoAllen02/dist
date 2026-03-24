@@ -132,30 +132,68 @@ window.player.ready(function() {
 
   var isFloorPlan = false;
 
-  // Interceptar mousemove solo cuando isFloorPlan=true
-  canvas.addEventListener('mousemove', function(e) {
-    if (!isFloorPlan) return;
+  // Interceptor de eventos — siempre activo, pero solo actúa en Floor Plan
+  var events = ['mousedown', 'mouseup', 'mousemove', 'wheel', 'touchstart', 'touchmove', 'touchend'];
 
-    var rect = canvas.getBoundingClientRect();
-    var centerX = rect.left + rect.width / 2;
-    var centerY = rect.top + rect.height / 2;
+  events.forEach(function(eventName) {
+    canvas.addEventListener(eventName, function(e) {
+      if (!isFloorPlan) return; // En tour y 3D, no tocamos nada
 
-    var corrected = new MouseEvent('mousemove', {
-      bubbles:    e.bubbles,
-      cancelable: e.cancelable,
-      clientX:    2 * centerX - e.clientX,
-      clientY:    2 * centerY - e.clientY,
-      movementX: -e.movementX,
-      movementY: -e.movementY,
-      buttons:    e.buttons,
-      button:     e.button,
-    });
+      e.stopImmediatePropagation();
+      e.preventDefault();
 
-    e.stopImmediatePropagation();
-    e.preventDefault();
-    canvas.dispatchEvent(corrected);
-  }, true);
+      var init = { bubbles: e.bubbles, cancelable: e.cancelable };
 
+      if (e.touches || e.changedTouches) {
+        // Touch: invertir cada punto de contacto respecto al centro del canvas
+        var rect = canvas.getBoundingClientRect();
+        var cx = rect.left + rect.width  / 2;
+        var cy = rect.top  + rect.height / 2;
+
+        var invertedTouches = Array.from(e.touches || e.changedTouches).map(function(t) {
+          return new Touch({
+            identifier: t.identifier,
+            target:     canvas,
+            clientX:    2 * cx - t.clientX,
+            clientY:    2 * cy - t.clientY,
+            pageX:      2 * (cx - rect.left + canvas.offsetLeft) - t.pageX,
+            pageY:      2 * (cy - rect.top  + canvas.offsetTop)  - t.pageY,
+            screenX:    t.screenX,
+            screenY:    t.screenY,
+            radiusX:    t.radiusX,
+            radiusY:    t.radiusY,
+            rotationAngle: t.rotationAngle,
+            force:      t.force,
+          });
+        });
+
+        init.touches        = eventName === 'touchend' ? [] : invertedTouches;
+        init.changedTouches = invertedTouches;
+        init.targetTouches  = eventName === 'touchend' ? [] : invertedTouches;
+        canvas.dispatchEvent(new TouchEvent(eventName, init));
+
+      } else if (eventName === 'wheel') {
+        init.deltaX    = -e.deltaX;
+        init.deltaY    = -e.deltaY;
+        init.deltaMode = e.deltaMode;
+        canvas.dispatchEvent(new WheelEvent('wheel', init));
+
+      } else {
+        // Mouse
+        var rect = canvas.getBoundingClientRect();
+        init.clientX    = 2 * (rect.left + rect.width  / 2) - e.clientX;
+        init.clientY    = 2 * (rect.top  + rect.height / 2) - e.clientY;
+        init.movementX  = -e.movementX;
+        init.movementY  = -e.movementY;
+        init.button     = e.button;
+        init.buttons    = e.buttons;
+        canvas.dispatchEvent(new MouseEvent(eventName, init));
+      }
+
+    }, true); // capture = true
+  });
+
+  // Polling hasta que fn-root inyecte los botones
   var interval = setInterval(function() {
     var walkingBtn = document.querySelector('span[title="Walking Mode"]');
     var btn3D      = document.querySelector('span[title="3D Mode"]');
@@ -164,21 +202,21 @@ window.player.ready(function() {
     if (!walkingBtn || !btn3D || !floorBtn) return;
     clearInterval(interval);
 
-    function applyFloorPlanRotation() {
+    function enterFloorPlan() {
       isFloorPlan = true;
       canvas.style.transition = 'transform 0.4s ease';
       canvas.style.transform  = 'rotate(180deg)';
     }
 
-    function removeRotation() {
+    function exitFloorPlan() {
       isFloorPlan = false;
       canvas.style.transition = 'transform 0.4s ease';
       canvas.style.transform  = 'none';
     }
 
-    floorBtn.addEventListener('click',   applyFloorPlanRotation);
-    walkingBtn.addEventListener('click', removeRotation);
-    btn3D.addEventListener('click',      removeRotation);
+    floorBtn.addEventListener('click',   enterFloorPlan);
+    walkingBtn.addEventListener('click', exitFloorPlan);
+    btn3D.addEventListener('click',      exitFloorPlan);
 
   }, 200);
 });
