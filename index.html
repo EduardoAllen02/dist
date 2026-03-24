@@ -21,6 +21,38 @@
     </style>
   </head>
   <body>
+    <!-- ANTES de <script src="player.js"> -->
+<script>
+  window.__isFloorPlan = false;
+
+  var _origAEL = EventTarget.prototype.addEventListener;
+  EventTarget.prototype.addEventListener = function(type, handler, options) {
+    if (type === 'pointermove') {
+      var _orig = handler;
+      handler = function(e) {
+        if (window.__isFloorPlan) {
+          var canvas = document.querySelector('#player canvas');
+          if (canvas) {
+            var rect = canvas.getBoundingClientRect();
+            var cx = rect.left + rect.width  / 2;
+            var cy = rect.top  + rect.height / 2;
+            var ox = e.clientX;
+            var oy = e.clientY;
+            var mx = e.movementX;
+            var my = e.movementY;
+            // Invertir posición absoluta Y delta de movimiento
+            Object.defineProperty(e, 'clientX',   { get: function(){ return 2*cx - ox; }, configurable: true });
+            Object.defineProperty(e, 'clientY',   { get: function(){ return 2*cy - oy; }, configurable: true });
+            Object.defineProperty(e, 'movementX', { get: function(){ return -mx; },       configurable: true });
+            Object.defineProperty(e, 'movementY', { get: function(){ return -my; },       configurable: true });
+          }
+        }
+        return _orig.call(this, e);
+      };
+    }
+    return _origAEL.call(this, type, handler, options);
+  };
+</script>
     <script src="player.js"></script>
     <div class="player" id="player"></div>
     <script>
