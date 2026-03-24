@@ -21,28 +21,6 @@
     </style>
   </head>
   <body>
-    <!-- Poner esto ANTES del <script src="player.js"> -->
-<script>
-  window.__isFloorPlan = false;
-
-  var _origAEL = EventTarget.prototype.addEventListener;
-  EventTarget.prototype.addEventListener = function(type, handler, options) {
-    if (type === 'pointermove') {
-      var _originalHandler = handler;
-      handler = function(e) {
-        if (window.__isFloorPlan) {
-          // Redefinir movementX/Y antes de que el handler original los lea
-          var mx = e.movementX;
-          var my = e.movementY;
-          Object.defineProperty(e, 'movementX', { get: function(){ return -mx; }, configurable: true });
-          Object.defineProperty(e, 'movementY', { get: function(){ return -my; }, configurable: true });
-        }
-        return _originalHandler.call(this, e);
-      };
-    }
-    return _origAEL.call(this, type, handler, options);
-  };
-</script>
     <script src="player.js"></script>
     <div class="player" id="player"></div>
     <script>
@@ -148,33 +126,53 @@
         debugOptions,
         configOptions
       )
-      window.player.ready(function() {
-        var canvas = document.querySelector('#player canvas');
-        if (!canvas) return;
+window.player.ready(function() {
+  var canvas = document.querySelector('#player canvas');
+  if (!canvas) return;
 
-        var interval = setInterval(function() {
-          var walkingBtn = document.querySelector('span[title="Walking Mode"]');
-          var btn3D      = document.querySelector('span[title="3D Mode"]');
-          var floorBtn   = document.querySelector('span[title="Floor Plan Mode"]');
-          if (!walkingBtn || !btn3D || !floorBtn) return;
-          clearInterval(interval);
+  function enterFloorPlan() {
+    window.__isFloorPlan = true;
+    canvas.style.transition = 'transform 0.4s ease';
+    canvas.style.transform  = 'rotate(180deg)';
+  }
 
-          floorBtn.addEventListener('click', function() {
-            window.__isFloorPlan = true;
-            canvas.style.transition = 'transform 0.4s ease';
-            canvas.style.transform  = 'rotate(180deg)';
-          });
+  function exitFloorPlan() {
+    window.__isFloorPlan = false;
+    canvas.style.transition = 'transform 0.4s ease';
+    canvas.style.transform  = 'none';
+  }
 
-          function exitFloorPlan() {
-            window.__isFloorPlan = false;
-            canvas.style.transition = 'transform 0.4s ease';
-            canvas.style.transform  = 'none';
-          }
+  var interval = setInterval(function() {
+    var walkingBtn = document.querySelector('span[title="Walking Mode"]');
+    var btn3D      = document.querySelector('span[title="3D Mode"]');
+    var floorBtn   = document.querySelector('span[title="Floor Plan Mode"]');
+    if (!walkingBtn || !btn3D || !floorBtn) return;
+    clearInterval(interval);
 
-          walkingBtn.addEventListener('click', exitFloorPlan);
-          btn3D.addEventListener('click', exitFloorPlan);
-        }, 200);
-      });
+    // Clicks en botones
+    floorBtn.addEventListener('click',   enterFloorPlan);
+    walkingBtn.addEventListener('click', exitFloorPlan);
+    btn3D.addEventListener('click',      exitFloorPlan);
+
+    // Observer: detecta cambio de clase en cualquier botón
+    var observer = new MutationObserver(function() {
+      if (!window.__isFloorPlan) return;
+
+      // Si walking se activa por cualquier método (pin, doble click, etc)
+      var walkIsActive  = walkingBtn.className.includes('css-1yar5nb');
+      var floorIsActive = floorBtn.className.includes('css-1nmeqo3');
+
+      if (!floorIsActive && walkIsActive) {
+        exitFloorPlan();
+      }
+    });
+
+    [walkingBtn, btn3D, floorBtn].forEach(function(btn) {
+      observer.observe(btn, { attributes: true, attributeFilter: ['class'] });
+    });
+
+  }, 200);
+});
     </script>
   </body>
 </html>
