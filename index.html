@@ -130,43 +130,30 @@
         var canvas = document.querySelector('#player canvas');
         if (!canvas) return;
 
-        // Rotar solo el canvas
-        canvas.style.transform = 'rotate(180deg)';
-        canvas.style.transformOrigin = 'center center';
+        // Esperar a que fn-root esté listo (app.js lo inyecta después)
+        var interval = setInterval(function() {
+          var walkingBtn  = document.querySelector('span[title="Walking Mode"]');
+          var btn3D       = document.querySelector('span[title="3D Mode"]');
+          var floorBtn    = document.querySelector('span[title="Floor Plan Mode"]');
 
-        // Interceptar eventos ANTES de que el motor los lea (capture phase)
-        var events = ['mousedown','mouseup','mousemove','click','dblclick','wheel'];
-        
-        events.forEach(function(eventName) {
-          canvas.addEventListener(eventName, function(e) {
-            var rect = canvas.getBoundingClientRect();
-            var centerX = rect.left + rect.width / 2;
-            var centerY = rect.top + rect.height / 2;
-            
-            // Para 180°: reflejar coordenadas respecto al centro
-            var newClientX = 2 * centerX - e.clientX;
-            var newClientY = 2 * centerY - e.clientY;
+          if (!walkingBtn || !btn3D || !floorBtn) return;
+          clearInterval(interval);
 
-            // Crear evento corregido
-            var corrected = new e.constructor(eventName, {
-              bubbles: e.bubbles,
-              cancelable: e.cancelable,
-              clientX: newClientX,
-              clientY: newClientY,
-              movementX: -e.movementX,
-              movementY: -e.movementY,
-              button: e.button,
-              buttons: e.buttons,
-              deltaX: e.deltaX,
-              deltaY: e.deltaY,
-              deltaMode: e.deltaMode,
-            });
+          function applyFloorPlanRotation() {
+            canvas.style.transition = 'transform 0.4s ease';
+            canvas.style.transform  = 'rotate(180deg)';
+          }
 
-            e.stopImmediatePropagation();
-            e.preventDefault();
-            canvas.dispatchEvent(corrected);
-          }, true); // capture = true, intercepta primero
-        });
+          function removeRotation() {
+            canvas.style.transition = 'transform 0.4s ease';
+            canvas.style.transform  = 'none';
+          }
+
+          floorBtn.addEventListener('click',  applyFloorPlanRotation);
+          walkingBtn.addEventListener('click', removeRotation);
+          btn3D.addEventListener('click',      removeRotation);
+
+        }, 200); // polling cada 200ms hasta que fn-root exista
       });
     </script>
   </body>
