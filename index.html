@@ -21,6 +21,28 @@
     </style>
   </head>
   <body>
+    <!-- Poner esto ANTES del <script src="player.js"> -->
+<script>
+  window.__isFloorPlan = false;
+
+  var _origAEL = EventTarget.prototype.addEventListener;
+  EventTarget.prototype.addEventListener = function(type, handler, options) {
+    if (type === 'pointermove') {
+      var _originalHandler = handler;
+      handler = function(e) {
+        if (window.__isFloorPlan) {
+          // Redefinir movementX/Y antes de que el handler original los lea
+          var mx = e.movementX;
+          var my = e.movementY;
+          Object.defineProperty(e, 'movementX', { get: function(){ return -mx; }, configurable: true });
+          Object.defineProperty(e, 'movementY', { get: function(){ return -my; }, configurable: true });
+        }
+        return _originalHandler.call(this, e);
+      };
+    }
+    return _origAEL.call(this, type, handler, options);
+  };
+</script>
     <script src="player.js"></script>
     <div class="player" id="player"></div>
     <script>
@@ -130,33 +152,6 @@
         var canvas = document.querySelector('#player canvas');
         if (!canvas) return;
 
-        var isFloorPlan = false;
-        var isFiring = false;
-
-        canvas.addEventListener('pointermove', function(e) {
-          if (!isFloorPlan) return;
-          if (isFiring) return;
-
-          e.stopImmediatePropagation();
-
-          isFiring = true;
-          canvas.dispatchEvent(new PointerEvent('pointermove', {
-            bubbles:     true,
-            cancelable:  true,
-            clientX:     e.clientX + (e.movementX * -2),
-            clientY:     e.clientY + (e.movementY * -2),
-            movementX:   -e.movementX,
-            movementY:   -e.movementY,
-            button:      e.button,
-            buttons:     e.buttons,
-            pointerId:   e.pointerId,
-            pointerType: e.pointerType,
-            pressure:    e.pressure,
-          }));
-          isFiring = false;
-
-        }, true);
-
         var interval = setInterval(function() {
           var walkingBtn = document.querySelector('span[title="Walking Mode"]');
           var btn3D      = document.querySelector('span[title="3D Mode"]');
@@ -165,20 +160,19 @@
           clearInterval(interval);
 
           floorBtn.addEventListener('click', function() {
-            isFloorPlan = true;
+            window.__isFloorPlan = true;
             canvas.style.transition = 'transform 0.4s ease';
             canvas.style.transform  = 'rotate(180deg)';
           });
 
           function exitFloorPlan() {
-            isFloorPlan = false;
+            window.__isFloorPlan = false;
             canvas.style.transition = 'transform 0.4s ease';
             canvas.style.transform  = 'none';
           }
 
           walkingBtn.addEventListener('click', exitFloorPlan);
           btn3D.addEventListener('click', exitFloorPlan);
-
         }, 200);
       });
     </script>
