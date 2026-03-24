@@ -127,9 +127,18 @@
         configOptions
       )
       window.player.ready(function() {
-        var canvas = document.querySelector('#player canvas')
-        if (canvas) {
-          canvas.style.transform = 'scaleX(-1)'
+        // Inspecciona el DOM para encontrar el floorplan
+        // Abre DevTools → Elements y busca el elemento del minimapa
+        
+        // Opción A: si el floorplan es un elemento separado con alguna clase
+        var floorplan = document.querySelector('.gcv-voh-floorplan') // clase ejemplo
+        
+        // Opción B: buscar todos los canvas y ver cuál es el del mapa
+        var canvases = document.querySelectorAll('#player canvas')
+        console.log(canvases) // inspecciona cuántos hay y cuál es cuál
+        
+        if (floorplan) {
+          floorplan.style.transform = 'rotate(180deg)'
         }
       })
     </script>
