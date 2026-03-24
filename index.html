@@ -126,90 +126,49 @@
         debugOptions,
         configOptions
       )
-window.player.ready(function() {
-  var canvas = document.querySelector('#player canvas');
-  if (!canvas) return;
+      window.player.ready(function() {
+        var canvas = document.querySelector('#player canvas');
+        if (!canvas) return;
 
-  var isFloorPlan = false;
-  var isFiring = false; 
+        var isFloorPlan = false;
 
-  var events = ['mousedown', 'mouseup', 'mousemove', 'touchstart', 'touchmove', 'touchend'];
+        // Modificar el evento directamente antes de que el motor lo lea
+        canvas.addEventListener('mousemove', function(e) {
+          if (!isFloorPlan) return;
 
-  events.forEach(function(eventName) {
-    canvas.addEventListener(eventName, function(e) {
-      if (!isFloorPlan) return;
-      if (isFiring) return;
+          var mx = e.movementX;
+          var my = e.movementY;
 
-      e.stopImmediatePropagation();
-      e.preventDefault();
+          Object.defineProperty(e, 'movementX', { get: function() { return -mx; }, configurable: true });
+          Object.defineProperty(e, 'movementY', { get: function() { return -my; }, configurable: true });
 
-      var rect = canvas.getBoundingClientRect();
-      var cx = rect.left + rect.width  / 2;
-      var cy = rect.top  + rect.height / 2;
-      var init = { bubbles: e.bubbles, cancelable: e.cancelable };
+        }, true); // capture=true: se ejecuta ANTES que el motor
 
-      if (eventName.startsWith('touch')) {
-        var src = e.touches.length ? e.touches : e.changedTouches;
-        var inverted = Array.from(src).map(function(t) {
-          return new Touch({
-            identifier: t.identifier, target: canvas,
-            clientX: 2 * cx - t.clientX,
-            clientY: 2 * cy - t.clientY,
-            pageX: t.pageX, pageY: t.pageY,
-            screenX: t.screenX, screenY: t.screenY,
-            radiusX: t.radiusX, radiusY: t.radiusY,
-            rotationAngle: t.rotationAngle, force: t.force,
+        // Polling botones
+        var interval = setInterval(function() {
+          var walkingBtn = document.querySelector('span[title="Walking Mode"]');
+          var btn3D      = document.querySelector('span[title="3D Mode"]');
+          var floorBtn   = document.querySelector('span[title="Floor Plan Mode"]');
+          if (!walkingBtn || !btn3D || !floorBtn) return;
+          clearInterval(interval);
+
+          floorBtn.addEventListener('click', function() {
+            isFloorPlan = true;
+            canvas.style.transition = 'transform 0.4s ease';
+            canvas.style.transform  = 'rotate(180deg)';
           });
-        });
-        init.touches        = eventName === 'touchend' ? [] : inverted;
-        init.changedTouches = inverted;
-        init.targetTouches  = eventName === 'touchend' ? [] : inverted;
 
-        isFiring = true;
-        canvas.dispatchEvent(new TouchEvent(eventName, init));
-        isFiring = false;
+          function exitFloorPlan() {
+            isFloorPlan = false;
+            canvas.style.transition = 'transform 0.4s ease';
+            canvas.style.transform  = 'none';
+          }
 
-      } else {
-        init.clientX   = 2 * cx - e.clientX;
-        init.clientY   = 2 * cy - e.clientY;
-        init.movementX = -e.movementX;
-        init.movementY = -e.movementY;
-        init.button    = e.button;
-        init.buttons   = e.buttons;
+          walkingBtn.addEventListener('click', exitFloorPlan);
+          btn3D.addEventListener('click',      exitFloorPlan);
 
-        isFiring = true;
-        canvas.dispatchEvent(new MouseEvent(eventName, init));
-        isFiring = false;
-      }
-
-    }, true);
-  });
-
-  // Polling botones
-  var interval = setInterval(function() {
-    var walkingBtn = document.querySelector('span[title="Walking Mode"]');
-    var btn3D      = document.querySelector('span[title="3D Mode"]');
-    var floorBtn   = document.querySelector('span[title="Floor Plan Mode"]');
-    if (!walkingBtn || !btn3D || !floorBtn) return;
-    clearInterval(interval);
-
-    floorBtn.addEventListener('click', function() {
-      isFloorPlan = true;
-      canvas.style.transition = 'transform 0.4s ease';
-      canvas.style.transform  = 'rotate(180deg)';
-    });
-
-    function exitFloorPlan() {
-      isFloorPlan = false;
-      canvas.style.transition = 'transform 0.4s ease';
-      canvas.style.transform  = 'none';
-    }
-
-    walkingBtn.addEventListener('click', exitFloorPlan);
-    btn3D.addEventListener('click',      exitFloorPlan);
-
-  }, 200);
-});
+        }, 200);
+      });
     </script>
   </body>
 </html>
