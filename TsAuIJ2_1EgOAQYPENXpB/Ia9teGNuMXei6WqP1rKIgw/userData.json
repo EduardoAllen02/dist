@@ -1,0 +1,614 @@
+{
+  "positions": [
+    {
+      "cameraMode": "CAMERA_MODES/DOLLHOUSE",
+      "id": "START_POSITION"
+    },
+    {
+      "is360": false,
+      "position": {
+        "x": -5.35568704951114,
+        "y": 1.6230186421548272,
+        "z": -7.3250108457886105
+      },
+      "angles": {
+        "x": 67.89804627646025,
+        "y": 1.6588954596146794
+      },
+      "view": {
+        "x": 0.9261274855118881,
+        "y": 0.02894914270568228,
+        "z": 0.37609816234067617
+      },
+      "panoramaView": {
+        "x": -0.7867636745669341,
+        "y": -0.03154166852943067,
+        "z": -0.6164479244253438
+      },
+      "panoramaId": "70",
+      "fov": 70,
+      "cameraMode": "CAMERA_MODES/INSIDE",
+      "id": "l3woUu1bGjPxrf72aTRhI"
+    }
+  ],
+  "tristan": {
+    "description": "SAP Milan",
+    "image": "embedded_files/info/nP7FwCaC9AsghjUI6frU9",
+    "name": "Ground Floor"
+  },
+  "address": {
+    "area": "",
+    "country": "",
+    "county": "",
+    "latitude": "",
+    "longitude": "",
+    "postcode": "",
+    "street": "SAP Ground FL",
+    "town": "",
+    "state": ""
+  },
+  "company": {
+    "id": "",
+    "logo": "",
+    "title": "",
+    "contacts": [
+      {
+        "type": "phone",
+        "value": ""
+      }
+    ]
+  },
+  "price": {
+    "currency": "USD",
+    "value": ""
+  },
+  "rooms": {
+    "amount": "",
+    "bathrooms": "",
+    "bedrooms": ""
+  },
+  "social": {
+    "description": "",
+    "title": "SAP Ground Floor"
+  },
+  "squaring": {
+    "unit": "sqft",
+    "value": ""
+  },
+  "description": "",
+  "persons": [
+    {
+      "contacts": [
+        {
+          "type": "phone",
+          "value": ""
+        }
+      ],
+      "firstName": "",
+      "lastName": "",
+      "photo": ""
+    }
+  ],
+  "highlights": [
+    {
+      "id": "highlight_80",
+      "place": {
+        "angles": {
+          "x": 180,
+          "y": 0
+        },
+        "cameraMode": "CAMERA_MODES/INSIDE",
+        "is360": true,
+        "panoramaId": "80",
+        "zoom": 1
+      },
+      "title": "Entrance 1"
+    },
+    {
+      "id": "highlight_79",
+      "place": {
+        "angles": {
+          "x": 180,
+          "y": 0
+        },
+        "cameraMode": "CAMERA_MODES/INSIDE",
+        "is360": true,
+        "panoramaId": "79",
+        "zoom": 1
+      },
+      "title": "Entrance ( Ext.)"
+    },
+    {
+      "id": "29sP6RITAWpNeFSFjVi4a",
+      "place": {
+        "angles": {
+          "x": -81.92539396335128,
+          "y": 19.644417768819423
+        },
+        "cameraMode": "CAMERA_MODES/INSIDE",
+        "fov": 70,
+        "is360": false,
+        "panoramaId": "54",
+        "panoramaView": {
+          "x": 0.033947099439564025,
+          "y": -0.34418381619756117,
+          "z": 0.9382883858960016
+        },
+        "position": {
+          "x": 10.679650860829659,
+          "y": 1.5824862773770014,
+          "z": -4.012148462830907
+        },
+        "view": {
+          "x": -0.9324601474293794,
+          "y": 0.33618178602102633,
+          "z": 0.13228711276497396
+        }
+      },
+      "title": "Green Void"
+    },
+    {
+      "id": "MNzRjsJJF1ZnBK7UMw4my",
+      "place": {
+        "angles": {
+          "x": 77.64382834393784,
+          "y": 0.2668001660627706
+        },
+        "cameraMode": "CAMERA_MODES/INSIDE",
+        "fov": 70,
+        "is360": false,
+        "panoramaId": "68",
+        "panoramaView": {
+          "x": 0.029848561821755704,
+          "y": -0.009540722637422745,
+          "z": -0.9995088983939708
+        },
+        "position": {
+          "x": -1.437179887431192,
+          "y": 1.618464439758954,
+          "z": -8.695985803862172
+        },
+        "view": {
+          "x": 0.9768256635883364,
+          "y": 0.004656524514424107,
+          "z": 0.21398584003305698
+        }
+      },
+      "title": "Reception"
+    },
+    {
+      "id": "G_N9cqp22KFExg11qPY1h",
+      "place": {
+        "angles": {
+          "x": 8.20410075727919,
+          "y": -3.146523083382783
+        },
+        "cameraMode": "CAMERA_MODES/INSIDE",
+        "fov": 70,
+        "is360": false,
+        "panoramaId": "68",
+        "panoramaView": {
+          "x": -0.923924803303423,
+          "y": 0.05440118626723135,
+          "z": -0.37868650460961695
+        },
+        "position": {
+          "x": -1.437179887431192,
+          "y": 1.618464439758954,
+          "z": -8.695985803862172
+        },
+        "view": {
+          "x": 0.14248464345351017,
+          "y": -0.05488958785558865,
+          "z": 0.9882738788033254
+        }
+      },
+      "title": "Speedgate"
+    },
+    {
+      "id": "uGlHYb1XA0LK7qbW6njqm",
+      "place": {
+        "angles": {
+          "x": -124.29182971995436,
+          "y": -9.038505360420663
+        },
+        "cameraMode": "CAMERA_MODES/INSIDE",
+        "fov": 70,
+        "is360": false,
+        "panoramaId": "21",
+        "panoramaView": {
+          "x": 0.009459946526457357,
+          "y": 0.15704143965695208,
+          "z": -0.9875467055497623
+        },
+        "position": {
+          "x": -10.313689146140256,
+          "y": 1.549417677492416,
+          "z": 11.546383646123024
+        },
+        "view": {
+          "x": -0.815919972579747,
+          "y": -0.1570982009897878,
+          "z": -0.5564123952530506
+        }
+      },
+      "title": "Auditorium"
+    },
+    {
+      "id": "pjnW9KHvvCBoKv_NU8ybB",
+      "place": {
+        "angles": {
+          "x": 49.33508254107392,
+          "y": -2.277682073575707
+        },
+        "cameraMode": "CAMERA_MODES/INSIDE",
+        "fov": 70,
+        "is360": false,
+        "panoramaId": "55",
+        "panoramaView": {
+          "x": 0.20008895435664661,
+          "y": 0.040419945366657224,
+          "z": 0.9789436339039242
+        },
+        "position": {
+          "x": 10.982848384795563,
+          "y": 1.585078929430993,
+          "z": 1.6536538735308859
+        },
+        "view": {
+          "x": 0.7579341994854647,
+          "y": -0.0397425819998061,
+          "z": 0.6511192490061375
+        }
+      },
+      "title": "Storytelling Plaza"
+    },
+    {
+      "id": "1kb6G7LOei4YZOK3KpySO",
+      "place": {
+        "angles": {
+          "x": 28.218321488071282,
+          "y": -1.9470628860813817
+        },
+        "cameraMode": "CAMERA_MODES/INSIDE",
+        "fov": 70,
+        "is360": false,
+        "panoramaId": "49",
+        "panoramaView": {
+          "x": 0.768517046739028,
+          "y": 0.03434731858993445,
+          "z": 0.6389067307339966
+        },
+        "position": {
+          "x": 15.901625552687637,
+          "y": 1.5957132952505164,
+          "z": -3.504153389138639
+        },
+        "view": {
+          "x": 0.4725595631439089,
+          "y": -0.033976117834993526,
+          "z": 0.8806435616627766
+        }
+      },
+      "title": "Coffee Hub"
+    }
+  ],
+  "tags": [],
+  "hiddenComponents": [
+    "share"
+  ],
+  "startPositionId": "l3woUu1bGjPxrf72aTRhI",
+  "defaultPositionId": null,
+  "minimap": {
+    "isOpening": true,
+    "mode": "3d"
+  },
+  "splashId": "5Q0gtRfGyt5QNN4hoW_-i",
+  "iosFullScreenLink": "",
+  "config": {
+    "inside_max_angle": 62,
+    "inside_min_angle": -62
+  },
+  "security": {
+    "hash": null
+  },
+  "whiteLabelling": {
+    "isEnabled": true,
+    "website": "",
+    "logo": "embedded_files/whitelabelling/aukXWlz-C0uljD8GbRxjQ",
+    "shortText": "Interiors3D",
+    "text": ""
+  },
+  "panoramas": [
+    {
+      "id": "0",
+      "isVisible": true
+    },
+    {
+      "id": "1",
+      "isVisible": true
+    },
+    {
+      "id": "2",
+      "isVisible": true
+    },
+    {
+      "id": "3",
+      "isVisible": true
+    },
+    {
+      "id": "4",
+      "isVisible": true
+    },
+    {
+      "id": "5",
+      "isVisible": true
+    },
+    {
+      "id": "6",
+      "isVisible": true
+    },
+    {
+      "id": "8",
+      "isVisible": true
+    },
+    {
+      "id": "9",
+      "isVisible": true
+    },
+    {
+      "id": "10",
+      "isVisible": true
+    },
+    {
+      "id": "11",
+      "isVisible": true
+    },
+    {
+      "id": "12",
+      "isVisible": true
+    },
+    {
+      "id": "14",
+      "isVisible": true
+    },
+    {
+      "id": "15",
+      "isVisible": true
+    },
+    {
+      "id": "16",
+      "isVisible": true
+    },
+    {
+      "id": "17",
+      "isVisible": true
+    },
+    {
+      "id": "18",
+      "isVisible": true
+    },
+    {
+      "id": "19",
+      "isVisible": true
+    },
+    {
+      "id": "20",
+      "isVisible": true
+    },
+    {
+      "id": "21",
+      "isVisible": true
+    },
+    {
+      "id": "23",
+      "isVisible": true
+    },
+    {
+      "id": "25",
+      "isVisible": true
+    },
+    {
+      "id": "26",
+      "isVisible": true
+    },
+    {
+      "id": "27",
+      "isVisible": true
+    },
+    {
+      "id": "28",
+      "isVisible": true
+    },
+    {
+      "id": "29",
+      "isVisible": true
+    },
+    {
+      "id": "30",
+      "isVisible": true
+    },
+    {
+      "id": "31",
+      "isVisible": true
+    },
+    {
+      "id": "32",
+      "isVisible": true
+    },
+    {
+      "id": "33",
+      "isVisible": true
+    },
+    {
+      "id": "34",
+      "isVisible": true
+    },
+    {
+      "id": "35",
+      "isVisible": true
+    },
+    {
+      "id": "36",
+      "isVisible": true
+    },
+    {
+      "id": "37",
+      "isVisible": true
+    },
+    {
+      "id": "38",
+      "isVisible": true
+    },
+    {
+      "id": "39",
+      "isVisible": true
+    },
+    {
+      "id": "40",
+      "isVisible": true
+    },
+    {
+      "id": "41",
+      "isVisible": true
+    },
+    {
+      "id": "42",
+      "isVisible": true
+    },
+    {
+      "id": "43",
+      "isVisible": true
+    },
+    {
+      "id": "44",
+      "isVisible": true
+    },
+    {
+      "id": "45",
+      "isVisible": true
+    },
+    {
+      "id": "46",
+      "isVisible": true
+    },
+    {
+      "id": "47",
+      "isVisible": true
+    },
+    {
+      "id": "48",
+      "isVisible": true
+    },
+    {
+      "id": "49",
+      "isVisible": true
+    },
+    {
+      "id": "51",
+      "isVisible": true
+    },
+    {
+      "id": "52",
+      "isVisible": true
+    },
+    {
+      "id": "53",
+      "isVisible": true
+    },
+    {
+      "id": "54",
+      "isVisible": true
+    },
+    {
+      "id": "55",
+      "isVisible": true
+    },
+    {
+      "id": "57",
+      "isVisible": true
+    },
+    {
+      "id": "58",
+      "isVisible": true
+    },
+    {
+      "id": "59",
+      "isVisible": true
+    },
+    {
+      "id": "60",
+      "isVisible": true
+    },
+    {
+      "id": "61",
+      "isVisible": true
+    },
+    {
+      "id": "62",
+      "isVisible": true
+    },
+    {
+      "id": "63",
+      "isVisible": true
+    },
+    {
+      "id": "65",
+      "isVisible": true
+    },
+    {
+      "id": "66",
+      "isVisible": true
+    },
+    {
+      "id": "67",
+      "isVisible": true
+    },
+    {
+      "id": "68",
+      "isVisible": true
+    },
+    {
+      "id": "69",
+      "isVisible": true
+    },
+    {
+      "id": "70",
+      "isVisible": true
+    },
+    {
+      "id": "71",
+      "isVisible": true
+    },
+    {
+      "id": "72",
+      "isVisible": true
+    },
+    {
+      "id": "73",
+      "isVisible": true
+    },
+    {
+      "id": "74",
+      "isVisible": true
+    },
+    {
+      "id": "75",
+      "isVisible": true
+    },
+    {
+      "id": "76",
+      "isVisible": true
+    },
+    {
+      "id": "77",
+      "isVisible": true
+    },
+    {
+      "id": "78",
+      "isVisible": true
+    }
+  ],
+  "maxId": 0,
+  "photos": []
+}
