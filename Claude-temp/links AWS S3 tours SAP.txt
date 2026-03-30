@@ -1,0 +1,23 @@
+Floor 0
+Dist: https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP0/dist/index.html
+Virtual folder principal: https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP0/S_FLjieAnJ3hxd0WBCuiM/
+Virtual sub folder: https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP0/S_FLjieAnJ3hxd0WBCuiM/Ia9teGNuMXei6WqP1rKIgw/
+
+Floor 1
+Dist: https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP1/dist/index.html
+Virtual folder principal: https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP1/wLtzKTQ-vUfiL4eQpXgMY/
+Virtual sub folder: https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP1/wLtzKTQ-vUfiL4eQpXgMY/u16wb_b4P-S3qKWzk0agug/
+
+
+este es el link nuevo de los botones que he traslado dentro la carpeta de Java_Sap, donde esan los otros dos archivos JS:
+https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Java+SAP/buttons/
+
+links de los botones:
+https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Java+SAP/buttons/1F_Q.png
+https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Java+SAP/buttons/2F_Q.png
+https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Java+SAP/buttons/3F_Q.png
+https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Java+SAP/buttons/4F_Q.png
+https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Java+SAP/buttons/5F_Q.png
+https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Java+SAP/buttons/6F_Q.png
+https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Java+SAP/buttons/GF_Q.png
+https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Java+SAP/buttons/Home.png

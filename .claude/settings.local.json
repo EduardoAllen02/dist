@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Yeyian PC/.claude/**)",
+      "Read(//c/Users/Yeyian PC/**)",
+      "Read(//c//**)",
+      "Bash(grep -oP '.{0,80}Ia9teGNuMXei6WqP1rKIgw.{0,80}' \"C:\\\\Users\\\\Yeyian PC\\\\Downloads\\\\dist\\\\dist\\\\dist\\\\Claude-temp\\\\tourData.json\")",
+      "Bash(grep -oP '.{0,200}script.{0,200}' \"C:\\\\Users\\\\Yeyian PC\\\\Downloads\\\\dist\\\\dist\\\\dist\\\\Claude-temp\\\\userData.json\")",
+      "Bash(grep:*)"
+    ]
+  }
+}
