@@ -1,0 +1,6 @@
+/* floor-navigator.css — reset de interferencias del viewer */
+#fn-root * {
+  box-sizing: border-box !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
