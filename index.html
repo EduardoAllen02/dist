@@ -25,6 +25,22 @@
 <script>
   window.__isFloorPlan = false;
 
+  // Bloquea la carga dinámica del floor-navigator desde GitHub Pages.
+  // Los pines embebidos en Rowi llaman load() que inyecta script/link apuntando
+  // a eduardoallen02.github.io — los archivos ya están cargados localmente.
+  (function() {
+    var _origAppendChild = Node.prototype.appendChild;
+    Node.prototype.appendChild = function(child) {
+      if (child && child.src && child.src.indexOf('eduardoallen02.github.io') !== -1) {
+        return child;
+      }
+      if (child && child.href && child.href.indexOf('eduardoallen02.github.io') !== -1) {
+        return child;
+      }
+      return _origAppendChild.call(this, child);
+    };
+  })();
+
   var _origAEL = EventTarget.prototype.addEventListener;
   EventTarget.prototype.addEventListener = function(type, handler, options) {
     if (type === 'pointermove') {
