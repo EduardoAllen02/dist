@@ -31,10 +31,10 @@
   (function() {
     var _origAppendChild = Node.prototype.appendChild;
     Node.prototype.appendChild = function(child) {
-      if (child && child.src && child.src.indexOf('eduardoallen02.github.io') !== -1) {
+      if (child && child.src && child.src.indexOf('eduardoallen02.github.io') !== -1 && child.src.indexOf('floor-navigator') !== -1) {
         return child;
       }
-      if (child && child.href && child.href.indexOf('eduardoallen02.github.io') !== -1) {
+      if (child && child.href && child.href.indexOf('eduardoallen02.github.io') !== -1 && child.href.indexOf('floor-navigator') !== -1) {
         return child;
       }
       return _origAppendChild.call(this, child);
