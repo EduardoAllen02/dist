@@ -154,7 +154,7 @@
     rs.setProperty('align-items',    'flex-start',   'important');
     rs.setProperty('gap',            sz.gap + 'px',  'important');
     rs.setProperty('z-index',        '2147483647',   'important');
-    rs.setProperty('pointer-events', 'auto',         'important');
+    rs.setProperty('pointer-events', 'none',          'important');
 
     /* ── Floor name label ── */
     var label = document.createElement('div');
