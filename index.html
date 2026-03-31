@@ -25,9 +25,9 @@
 <script>
   window.__isFloorPlan = false;
 
-  // Bloquea la carga dinámica del floor-navigator desde GitHub Pages.
-  // Los pines embebidos en Rowi llaman load() que inyecta script/link apuntando
-  // a eduardoallen02.github.io — los archivos ya están cargados localmente.
+  // Blocks dynamic loading of floor-navigator from GitHub Pages.
+  // Pins embedded in Rowi call load() which injects a script/link pointing
+  // the files are already loaded locally.
   (function() {
     var _origAppendChild = Node.prototype.appendChild;
     Node.prototype.appendChild = function(child) {

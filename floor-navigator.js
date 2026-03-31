@@ -1,13 +1,9 @@
 !function () {
 
-  /* ─── CONFIG GLOBAL ────────────────────────────────────────────────────────
-   * DIST_BASE  → URL del index.html del dist (uno solo para todos los pisos)
-   * TOURS_BASE → Base de assets si todos los pisos comparten la misma raíz.
-   *              Si cada piso tiene su propio contentPath, déjalo vacío y
-   *              ponlo por piso en el array FLOORS.
+  /* ─── GLOBAL CONFIG ────────────────────────────────────────────────────────
+   * DIST_BASE → URL of the single shared dist (index.html entry point)
    * ──────────────────────────────────────────────────────────────────────── */
-  var DIST_BASE  = 'https://eduardoallen02.github.io/dist/';
-  var TOURS_BASE = '';   // ej: 'https://mi-servidor.com/tours/'
+  var DIST_BASE = 'https://eduardoallen02.github.io/dist/';
 
   var HOME_URL         = 'https://TU-LANDING.com/';
   var IMG_BASE         = 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Java+SAP/buttons/';
@@ -31,9 +27,9 @@
   };
 
   /* ─── FLOOR LINKS ──────────────────────────────────────────────────────────
-   * tourId     → ID del tour (nombre de la subcarpeta dentro de contentPath)
-   * contentPath→ URL base de los assets de ese piso (sobreescribe TOURS_BASE)
-   * img        → imagen del botón
+   * tourId      → tour ID (subfolder name inside the contentPath bucket)
+   * contentPath → base URL for this floor's assets
+   * img         → button image filename
    * ──────────────────────────────────────────────────────────────────────── */
   var FLOORS = [
     { l: '6F', tourId: 'SsZAVZjTPJqFki4tohl1rQ', contentPath: 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP6/wLtzKTQ-vUfiL4eQpXgMY/', img: '6F_Q.png' },
@@ -45,13 +41,12 @@
     { l: 'GF', tourId: 'Ia9teGNuMXei6WqP1rKIgw',  contentPath: 'https://eduardoallen02.github.io/dist/TsAuIJ2_1EgOAQYPENXpB/', img: 'GF_Q.png' }
   ];
 
-  /* ─── CONSTRUCCIÓN DE URL ─────────────────────────────────────────────── */
+  /* ─── URL BUILDER ────────────────────────────────────────────────────── */
   function buildTourUrl(floor) {
-    var content = floor.contentPath || TOURS_BASE;
-    return DIST_BASE + '?tour=' + floor.tourId + '&content-path=' + encodeURIComponent(content);
+    return DIST_BASE + '?tour=' + floor.tourId + '&content-path=' + encodeURIComponent(floor.contentPath);
   }
 
-  /* ─── DETECCIÓN DEL PISO ACTUAL desde ?tour= en el URL ───────────────── */
+  /* ─── DETECT CURRENT FLOOR from ?tour= URL param ─────────────────────── */
   function getCurrentFloor() {
     var params  = new URLSearchParams(window.location.search);
     var tourId  = params.get('tour');
@@ -161,7 +156,7 @@
     rs.setProperty('z-index',        '2147483647',   'important');
     rs.setProperty('pointer-events', 'auto',         'important');
 
-    /* ── Label nombre del piso ── */
+    /* ── Floor name label ── */
     var label = document.createElement('div');
     label.textContent = floorName;
     var ls = label.style;
@@ -214,7 +209,7 @@
     });
 
     targetBody.appendChild(root);
-    console.log('[FloorNav] OK | piso:', cur, '| mobile:', mobile, '| size:', sz.size + 'px');
+    console.log('[FloorNav] OK | floor:', cur, '| mobile:', mobile, '| size:', sz.size + 'px');
 
     /* ── Resize ── */
     var resizeTimer;
@@ -241,7 +236,7 @@
     var cur = getCurrentFloor();
     if (cur) { setup(cur); return; }
     if (n < 30) setTimeout(function () { init(n + 1); }, 200);
-    else console.warn('[FloorNav] tour ID no reconocido en el URL');
+    else console.warn('[FloorNav] tour ID not recognized in URL');
   }
 
   document.readyState === 'loading'
