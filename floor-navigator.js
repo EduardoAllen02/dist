@@ -6,7 +6,7 @@
    *              Si cada piso tiene su propio contentPath, déjalo vacío y
    *              ponlo por piso en el array FLOORS.
    * ──────────────────────────────────────────────────────────────────────── */
-  var DIST_BASE  = 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP0/dist/index.html';
+  var DIST_BASE  = 'https://eduardoallen02.github.io/dist/';
   var TOURS_BASE = '';   // ej: 'https://mi-servidor.com/tours/'
 
   var HOME_URL         = 'https://TU-LANDING.com/';
@@ -41,8 +41,8 @@
     { l: '4F', tourId: 'NZDBUCHUNDCWB45khkfk7w', contentPath: 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP4/wLtzKTQ-vUfiL4eQpXgMY/', img: '4F_Q.png' },
     { l: '3F', tourId: 'psbalPABO22nlaPk2iL7wQ',  contentPath: 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP3/wLtzKTQ-vUfiL4eQpXgMY/', img: '3F_Q.png' },
     { l: '2F', tourId: 'vkDhnv90NXq7P15ebi316g',  contentPath: 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP2/wLtzKTQ-vUfiL4eQpXgMY/', img: '2F_Q.png' },
-    { l: '1F', tourId: 'u16wb_b4P-S3qKWzk0agug',  contentPath: 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP1/wLtzKTQ-vUfiL4eQpXgMY/', img: '1F_Q.png' },
-    { l: 'GF', tourId: 'Ia9teGNuMXei6WqP1rKIgw',  contentPath: 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP0/S_FLjieAnJ3hxd0WBCuiM/', img: 'GF_Q.png' }
+    { l: '1F', tourId: 'u16wb_b4P-S3qKWzk0agug',  contentPath: 'https://eduardoallen02.github.io/dist/TsAuIJ2_1EgOAQYPENXpB/', img: '1F_Q.png' },
+    { l: 'GF', tourId: 'Ia9teGNuMXei6WqP1rKIgw',  contentPath: 'https://eduardoallen02.github.io/dist/TsAuIJ2_1EgOAQYPENXpB/', img: 'GF_Q.png' }
   ];
 
   /* ─── CONSTRUCCIÓN DE URL ─────────────────────────────────────────────── */
