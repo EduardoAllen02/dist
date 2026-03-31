@@ -69453,44 +69453,7 @@ object-assign
             {
               key: "render",
               value: function () {
-                var e = this.props,
-                  t = e.data,
-                  n = e.isOpened,
-                  i = e.isActive,
-                  r = e.dispatch,
-                  o = this.getCollection(t);
-                return v.a.createElement(
-                  S,
-                  {
-                    className: "InfoTrigger",
-                    title: "Info Block",
-                    isOpened: !!i && n,
-                    isActive: i,
-                    onMouseUp: function () {
-                      i &&
-                        (r(A.setVisibility(!1)),
-                        r(M.setVisibility(!1)),
-                        r(w.setVisibility(!n)));
-                    },
-                  },
-                  o.avatarUrl || o.avatarText
-                    ? v.a.createElement(
-                        _,
-                        { avatarUrl: o.avatarUrl },
-                        v.a.createElement("span", null, o.avatarText),
-                      )
-                    : v.a.createElement(
-                        _,
-                        { isIcon: !0 },
-                        v.a.createElement(b, null),
-                      ),
-                  v.a.createElement(
-                    T,
-                    null,
-                    o.description && v.a.createElement(L, null, o.description),
-                    o.name && v.a.createElement(P, null, o.name),
-                  ),
-                );
+                return null;
               },
             },
           ]),
