@@ -23,11 +23,7 @@
   <body>
     <!-- ANTES de <script src="player.js"> -->
 <script>
-  window.__isFloorPlan = false;
-
   // Blocks dynamic loading of floor-navigator from GitHub Pages.
-  // Pins embedded in Rowi call load() which injects a script/link pointing
-  // the files are already loaded locally.
   (function() {
     var _origAppendChild = Node.prototype.appendChild;
     Node.prototype.appendChild = function(child) {
@@ -40,34 +36,6 @@
       return _origAppendChild.call(this, child);
     };
   })();
-
-  var _origAEL = EventTarget.prototype.addEventListener;
-  EventTarget.prototype.addEventListener = function(type, handler, options) {
-    if (type === 'pointermove') {
-      var _orig = handler;
-      handler = function(e) {
-        if (window.__isFloorPlan) {
-          var canvas = document.querySelector('#player canvas');
-          if (canvas) {
-            var rect = canvas.getBoundingClientRect();
-            var cx = rect.left + rect.width  / 2;
-            var cy = rect.top  + rect.height / 2;
-            var ox = e.clientX;
-            var oy = e.clientY;
-            var mx = e.movementX;
-            var my = e.movementY;
-            // Invertir posición absoluta Y delta de movimiento
-            Object.defineProperty(e, 'clientX',   { get: function(){ return 2*cx - ox; }, configurable: true });
-            Object.defineProperty(e, 'clientY',   { get: function(){ return 2*cy - oy; }, configurable: true });
-            Object.defineProperty(e, 'movementX', { get: function(){ return -mx; },       configurable: true });
-            Object.defineProperty(e, 'movementY', { get: function(){ return -my; },       configurable: true });
-          }
-        }
-        return _orig.call(this, e);
-      };
-    }
-    return _origAEL.call(this, type, handler, options);
-  };
 </script>
     <link rel="stylesheet" href="floor-navigator.css">
     <script src="bridge.js"></script>
@@ -194,49 +162,27 @@ window.player.ready(function() {
   var ALIGN_ANGLE_Y  = 0;     // sin inclinación vertical
   var TRANSITION_MS  = 1100;  // ms de espera para la rotación (≥ transition_time_max)
 
-  /* ── Refs ─────────────────────────────────────────────────────────── */
-  var canvas = document.querySelector('#player canvas');
-  if (!canvas) return;
-
-  var api    = window.player.Api();
-  var GCV    = api.Common.getBowels().GCV;
+  var api     = window.player.Api();
+  var GCV     = api.Common.getBowels().GCV;
   var skipPre = false;
-
-  /* ── Efectos CSS de flip ──────────────────────────────────────────── */
-  function enterFloorPlan() {
-    window.__isFloorPlan = true;
-    canvas.style.transition = 'transform 0.4s ease';
-    canvas.style.transform  = 'rotate(180deg)';
-  }
-
-  function exitFloorPlan() {
-    window.__isFloorPlan = false;
-    canvas.style.transition = 'transform 0.4s ease';
-    canvas.style.transform  = 'none';
-  }
 
   /* ── Espera botones del player ────────────────────────────────────── */
   var interval = setInterval(function() {
     var walkingBtn = document.querySelector('span[title="Walking Mode"]');
-    var btn3D      = document.querySelector('span[title="3D Mode"]');
     var floorBtn   = document.querySelector('span[title="Floor Plan Mode"]');
-    if (!walkingBtn || !btn3D || !floorBtn) return;
+    if (!walkingBtn || !floorBtn) return;
     clearInterval(interval);
 
     /* ── Interceptor capture-phase: rota cámara antes del floorplan ── */
     floorBtn.addEventListener('click', function(e) {
-      // Segunda pasada (programática): dejar pasar al listener del player
       if (skipPre) { skipPre = false; return; }
 
-      // Solo aplica si estamos en modo walk/inside
       var mode = GCV.Camera.currentMode && GCV.Camera.currentMode.name;
       var walkActive = walkingBtn.className.includes('css-1yar5nb');
       if (mode !== 'CAMERA_MODES/INSIDE' && !walkActive) return;
 
-      // Detener el evento — el listener del player NO se ejecutará aún
       e.stopImmediatePropagation();
 
-      // Girar cámara al ángulo de alineación en el mismo panorama
       api.Camera.set({
         cameraMode:      'CAMERA_MODES/INSIDE',
         panoramaId:      String(GCV.Panoramas.activeId),
@@ -244,30 +190,12 @@ window.player.ready(function() {
         transitionStyle: 'TRANSITION_STYLES/FLY',
       });
 
-      // Tras la rotación, re-disparar el click → ahora skipPre=true
       setTimeout(function() {
         skipPre = true;
         floorBtn.click();
       }, TRANSITION_MS);
 
-    }, true); // true = capture phase (se ejecuta ANTES del listener del player)
-
-    /* ── Listeners normales de modo ───────────────────────────────── */
-    floorBtn.addEventListener('click',   enterFloorPlan);
-    walkingBtn.addEventListener('click', exitFloorPlan);
-    btn3D.addEventListener('click',      exitFloorPlan);
-
-    /* ── Observer: detecta cambio de modo por métodos alternativos ── */
-    var observer = new MutationObserver(function() {
-      if (!window.__isFloorPlan) return;
-      var walkIsActive  = walkingBtn.className.includes('css-1yar5nb');
-      var floorIsActive = floorBtn.className.includes('css-1nmeqo3');
-      if (!floorIsActive && walkIsActive) exitFloorPlan();
-    });
-
-    [walkingBtn, btn3D, floorBtn].forEach(function(btn) {
-      observer.observe(btn, { attributes: true, attributeFilter: ['class'] });
-    });
+    }, true);
 
   }, 200);
 });
