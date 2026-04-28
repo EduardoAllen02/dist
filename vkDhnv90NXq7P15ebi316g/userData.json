@@ -1,0 +1,1226 @@
+{
+  "positions": [
+    {
+      "cameraMode": "CAMERA_MODES/DOLLHOUSE",
+      "id": "START_POSITION"
+    },
+    {
+      "angles": {
+        "x": 359.93737677271434,
+        "y": -3.238708600692012
+      },
+      "cameraMode": "CAMERA_MODES/INSIDE",
+      "fov": 70,
+      "id": "H_PQoeWUt5MkbBAIDzf4_",
+      "is360": false,
+      "panoramaId": "26",
+      "panoramaView": {
+        "x": -0.3966291825564459,
+        "y": 0.054894048179332806,
+        "z": 0.9163361473930244
+      },
+      "position": {
+        "x": -0.8575423026837785,
+        "y": 1.6322526092779615,
+        "z": 2.923253516894708
+      },
+      "view": {
+        "x": -0.0010912356029775744,
+        "y": -0.05649603132552161,
+        "z": 0.9984022273859994
+      }
+    }
+  ],
+  "tristan": {
+    "description": "",
+    "image": "",
+    "name": ""
+  },
+  "address": {
+    "area": "",
+    "country": "",
+    "county": "",
+    "latitude": "",
+    "longitude": "",
+    "postcode": "",
+    "street": "",
+    "town": "",
+    "state": ""
+  },
+  "company": {
+    "id": "",
+    "logo": "",
+    "title": "",
+    "contacts": [
+      {
+        "type": "phone",
+        "value": ""
+      }
+    ]
+  },
+  "price": {
+    "currency": "USD",
+    "value": ""
+  },
+  "rooms": {
+    "amount": "",
+    "bathrooms": "",
+    "bedrooms": ""
+  },
+  "social": {
+    "description": "",
+    "title": "SAP 2 FL"
+  },
+  "squaring": {
+    "unit": "sqft",
+    "value": ""
+  },
+  "description": "",
+  "persons": [
+    {
+      "contacts": [
+        {
+          "type": "phone",
+          "value": ""
+        }
+      ],
+      "firstName": "",
+      "lastName": "",
+      "photo": ""
+    }
+  ],
+  "highlights": [
+    {
+      "id": "T1wrpYG_ml6IH-bQKAbVT",
+      "place": {
+        "is360": true,
+        "position": null,
+        "angles": {
+          "x": -167.80073214707625,
+          "y": 0.4174043980518927
+        },
+        "view": {
+          "x": -0.2113066992477971,
+          "y": 0.00728501661901822,
+          "z": -0.97739265773069
+        },
+        "panoramaView": {
+          "x": -0.2113066992477971,
+          "y": -0.00728501661901822,
+          "z": 0.97739265773069
+        },
+        "panoramaId": "cGlhbm8yYS5qcGc=",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Green Void"
+    },
+    {
+      "id": "VKWaoCPgVjJvybhIW1y31",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -8.744858792365132,
+          "y": 1.6388439083066102,
+          "z": -11.520507182394283
+        },
+        "angles": {
+          "x": -114.09292000869057,
+          "y": -1.6972221759390747
+        },
+        "view": {
+          "x": -0.9124841422995827,
+          "y": -0.02961778321329902,
+          "z": -0.408038572893942
+        },
+        "panoramaView": {
+          "x": 0.7805726731581082,
+          "y": 0.033241034216751605,
+          "z": 0.6241805312271489
+        },
+        "panoramaId": "6",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "HR Fabbrica del Vapore"
+    },
+    {
+      "id": "acukJEHNJEhUnOygtvl70",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -9.041928368967744,
+          "y": 1.657594170028141,
+          "z": -8.7538228964083
+        },
+        "angles": {
+          "x": -90.61322054858564,
+          "y": -1.305267289110572
+        },
+        "view": {
+          "x": -0.9996832607425541,
+          "y": -0.02277924135209514,
+          "z": -0.010699736191042022
+        },
+        "panoramaView": {
+          "x": 0.14907739988294275,
+          "y": 0.025138408879949357,
+          "z": 0.9885059378896648
+        },
+        "panoramaId": "1",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "MR Pirellone"
+    },
+    {
+      "id": "gspDbHsxxoI7TnzQ3cHgp",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -1.3629187425294942,
+          "y": 1.6309813094799646,
+          "z": -8.472684488909321
+        },
+        "angles": {
+          "x": -238.38503424719653,
+          "y": -3.409836705063143
+        },
+        "view": {
+          "x": 0.8500824107690683,
+          "y": -0.05947775340056052,
+          "z": -0.5232803185210307
+        },
+        "panoramaView": {
+          "x": 0.148030710162204,
+          "y": 0.05688250851934801,
+          "z": 0.9873455773301565
+        },
+        "panoramaId": "10",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Flex Space Finance / Sales ops"
+    },
+    {
+      "id": "Vg5JWixfAKoWLmOshGRzG",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -17.504527270823864,
+          "y": 1.55699960018958,
+          "z": 6.5602345619023685
+        },
+        "angles": {
+          "x": -333.8073205274818,
+          "y": 1.8683209734876505
+        },
+        "view": {
+          "x": 0.4411565630324479,
+          "y": 0.032602574009840145,
+          "z": 0.8968377551493529
+        },
+        "panoramaView": {
+          "x": -0.941633407752336,
+          "y": -0.030889365893963405,
+          "z": 0.3352198867600076
+        },
+        "panoramaId": "75",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Flex Space Contract / Finance"
+    },
+    {
+      "id": "EayTGruOgY3zgoONVP7ND",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -17.608617397860794,
+          "y": 1.5520429049730327,
+          "z": 4.906862824620343
+        },
+        "angles": {
+          "x": -156.54544614036132,
+          "y": -4.221384662080492
+        },
+        "view": {
+          "x": -0.396941742021202,
+          "y": -0.0736104224554966,
+          "z": -0.9148872931389402
+        },
+        "panoramaView": {
+          "x": -0.5089936466129165,
+          "y": 0.07535475412259554,
+          "z": 0.8574655262684376
+        },
+        "panoramaId": "79",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Priority Room"
+    },
+    {
+      "id": "w5gzQ6a2uEaxOjNJGOHZL",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -16.758504545988558,
+          "y": 1.5592105107565133,
+          "z": 1.4535063847782284
+        },
+        "angles": {
+          "x": -300.20127212330766,
+          "y": -0.08339834878243445
+        },
+        "view": {
+          "x": 0.8642627177616007,
+          "y": -0.001455575262991869,
+          "z": 0.50303860288052
+        },
+        "panoramaView": {
+          "x": 0.6042402614052614,
+          "y": 0.0021271850044796833,
+          "z": 0.7967993358310846
+        },
+        "panoramaId": "82",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "HR Office"
+    },
+    {
+      "id": "Gg4xV9Bojw9dOkpmVNwWy",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -8.985144442647847,
+          "y": 1.5621067784363503,
+          "z": 10.499941102555448
+        },
+        "angles": {
+          "x": 79.50383456605464,
+          "y": -0.7385135084302733
+        },
+        "view": {
+          "x": 0.9831854232394592,
+          "y": -0.012889135387609807,
+          "z": 0.18215458742069934
+        },
+        "panoramaView": {
+          "x": 0.7356244940777713,
+          "y": 0.01414376930934036,
+          "z": 0.6772418751838571
+        },
+        "panoramaId": "66",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "MR Torre Hadid"
+    },
+    {
+      "id": "Tvo7CX4MF8FVoc94Dwmzn",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -7.315643387630386,
+          "y": 1.5541598600725177,
+          "z": 8.870089086017854
+        },
+        "angles": {
+          "x": 100.75504767576479,
+          "y": -0.468019400510658
+        },
+        "view": {
+          "x": 0.9824011856059083,
+          "y": -0.00816838866340824,
+          "z": -0.186604362078568
+        },
+        "panoramaView": {
+          "x": 0.3722574823216959,
+          "y": 0.007930796004320971,
+          "z": 0.9280956143255125
+        },
+        "panoramaId": "65",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "MR Fondazione Prada"
+    },
+    {
+      "id": "NgOP-iTMpl2o2dSV_zpU3",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": 12.617700484046097,
+          "y": 1.6712924508724292,
+          "z": 5.931725070151223
+        },
+        "angles": {
+          "x": 9.98501537952687,
+          "y": -0.9258183149808233
+        },
+        "view": {
+          "x": 0.17336797838899373,
+          "y": -0.016157874714386684,
+          "z": 0.9847245641061403
+        },
+        "panoramaView": {
+          "x": 0.9993319400586276,
+          "y": 0.014458379669914423,
+          "z": -0.03356529213309739
+        },
+        "panoramaId": "43",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "GRF GPO GPS Car Fleet"
+    },
+    {
+      "id": "ZNc-ECorHMNQp6u5QRCkA",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": 19.08050109275781,
+          "y": 1.6737724257334574,
+          "z": 8.806886474642875
+        },
+        "angles": {
+          "x": 184.29058252317452,
+          "y": -3.553642361140477
+        },
+        "view": {
+          "x": -0.07467096894923574,
+          "y": -0.06198300219458758,
+          "z": -0.9952800378964346
+        },
+        "panoramaView": {
+          "x": -0.8789862129914527,
+          "y": 0.06064619277088788,
+          "z": -0.47297492182286066
+        },
+        "panoramaId": "49",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Quiet Booth"
+    },
+    {
+      "id": "473_mN68nlKyxakNAcjhw",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": 16.20203232400079,
+          "y": 1.6404092819843314,
+          "z": -1.8670903114867856
+        },
+        "angles": {
+          "x": 231.13329059856972,
+          "y": -0.0023443287996091564
+        },
+        "view": {
+          "x": -0.7786078822115681,
+          "y": -0.000040916256291089546,
+          "z": -0.6275107681019322
+        },
+        "panoramaView": {
+          "x": -0.3215938152592934,
+          "y": 0.0006540136399640615,
+          "z": 0.9468774948498511
+        },
+        "panoramaId": "56",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Tech Cafe"
+    }
+  ],
+  "tags": [
+    {
+      "id": "DUhh1CLTE4XbE_TN7rHJy",
+      "position": {
+        "x": -0.79,
+        "y": 0.05,
+        "z": 5.07
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.22532349993909387,
+      "type": "image",
+      "image": "embedded_files/pins/fWd5HtFG1tmNcxSitfzTh",
+      "hasWebp": true
+    },
+    {
+      "id": "zQAuOfWKYtsRJ28QFbpHY",
+      "position": {
+        "x": -6.6,
+        "y": 0.01,
+        "z": 10.19
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.19999999999999965,
+      "type": "image",
+      "image": "embedded_files/pins/4nER0eq_AqtUZ1vzkwG4N",
+      "hasWebp": true
+    },
+    {
+      "id": "9lQIxadlUXwcwxB_P6wZR",
+      "position": {
+        "x": -6.54,
+        "y": 0,
+        "z": 9.31
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.25032633701655205,
+      "type": "image",
+      "image": "embedded_files/pins/5M8H3jf6fExvC7jUXq3w8",
+      "hasWebp": true
+    },
+    {
+      "id": "Lb3xGpWn5gwsjf-1kAISb",
+      "position": {
+        "x": 6.4,
+        "y": 0.1,
+        "z": 4.22
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.20478286101987697,
+      "type": "image",
+      "image": "embedded_files/pins/Mc3A_FPSQksEPIlNu8P03",
+      "hasWebp": true
+    },
+    {
+      "id": "CSiT44aMkaUUeQoDfEr45",
+      "position": {
+        "x": 9.11,
+        "y": 0.08,
+        "z": 2.07
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.20000000000000032,
+      "type": "image",
+      "image": "embedded_files/pins/wZ-2MnpLhEFixQfrRRxcZ",
+      "hasWebp": true
+    },
+    {
+      "id": "scXZus7S1SqJNQ6ies25g",
+      "position": {
+        "x": 3.68,
+        "y": 0.08,
+        "z": 1.25
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.19999999999999965,
+      "type": "image",
+      "image": "embedded_files/pins/rS8W9roLwjPVD4flZlDlm",
+      "hasWebp": true
+    },
+    {
+      "id": "IJMDaxRnkI6CCdY8F4x6S",
+      "position": {
+        "x": 14.41,
+        "y": 0.06,
+        "z": -4.03
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.19999999999999965,
+      "type": "image",
+      "image": "embedded_files/pins/s-2OV_2xzvmMS1zNIw39-",
+      "hasWebp": true
+    },
+    {
+      "id": "1xLq2yjT9Bho8Ef7B9a9O",
+      "position": {
+        "x": 16.68,
+        "y": 0.37,
+        "z": -5.37
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "distance": 0.20000000000000018,
+      "type": "image",
+      "image": "embedded_files/pins/ol4TBCEG4EOv9_fbfcFdf",
+      "hasWebp": true
+    },
+    {
+      "id": "OdBxQZlfdkI-yP2kxLrUw",
+      "position": {
+        "x": 9.12,
+        "y": 0.24,
+        "z": -7.88
+      },
+      "floor": "0",
+      "direction": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "distance": 0.1999999999999993,
+      "type": "image",
+      "image": "embedded_files/pins/IY_a1rwpU_0QRrUNVK7sh",
+      "hasWebp": true
+    },
+    {
+      "id": "5cidrn0hii3wzlQ2u7xXk",
+      "position": {
+        "x": -15.12,
+        "y": -0.01,
+        "z": 1.52
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.2000000000000001,
+      "type": "image",
+      "image": "embedded_files/pins/UlGznVP6dMisdvIEPQCLa",
+      "hasWebp": true
+    },
+    {
+      "id": "9aYytB-N0jWlGHy9v1hTM",
+      "position": {
+        "x": -0.82,
+        "y": 0.06,
+        "z": -8.48
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.20000000000000032,
+      "type": "image",
+      "image": "embedded_files/pins/m9ygfVl2OgJZBY66yPGpo",
+      "hasWebp": true
+    },
+    {
+      "id": "qZGHoEX13hFG9bLy3aDUX",
+      "position": {
+        "x": 2.8,
+        "y": 0.71,
+        "z": -9.41
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "distance": 0.20141414071312802,
+      "type": "image",
+      "image": "embedded_files/pins/FQ-x61O-CA1tNOE8EQW8l",
+      "hasWebp": true
+    },
+    {
+      "id": "unK6I_IJ63RBYfvEH4_qM",
+      "position": {
+        "x": 14.58,
+        "y": 0.11,
+        "z": 9.5
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.19999999999999987,
+      "type": "image",
+      "image": "embedded_files/pins/2ulOh1K2wn5BM_ONbcnSX",
+      "hasWebp": true
+    },
+    {
+      "id": "rrlwt83wWv1Tu-2r5l3_l",
+      "position": {
+        "x": -14.19,
+        "y": -0.02,
+        "z": 8.75
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.19999999999999987,
+      "type": "image",
+      "image": "embedded_files/pins/0cFoU45E-kO_XkGOs-iYs",
+      "hasWebp": true
+    },
+    {
+      "id": "iuMt-cjS481yd65JojD94",
+      "position": {
+        "x": 17.74,
+        "y": 0.65,
+        "z": 6.69
+      },
+      "floor": "0",
+      "direction": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "distance": 0.1999999999999993,
+      "type": "image",
+      "image": "embedded_files/pins/71LB318W9W7IxsPUgrPzP",
+      "hasWebp": true
+    },
+    {
+      "id": "4TPTELjqcr2I4CCNMxYkg",
+      "position": {
+        "x": 6.71,
+        "y": 0.04,
+        "z": -12.08
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.2000000000000001,
+      "type": "custom",
+      "content": "<span id=\"fn-cfg\" data-floor=\"2F\" style=\"display:none\"></span>",
+      "javascript": "function load() {\n  var base = 'https://eduardoallen02.github.io/floor-navigato/';\n  var h = document.head;\n  var s = document.createElement('script');\n  s.src = base + 'floor-navigator.js?v=' + Date.now();\n  h.appendChild(s);\n  var l = document.createElement('link');\n  l.rel = 'stylesheet';\n  l.href = base + 'floor-navigator.css?v=' + Date.now();\n  h.appendChild(l);\n}\nload();"
+    },
+    {
+      "id": "0fE6A1gWNHG0KgB_XHt2C",
+      "position": {
+        "x": -13.41,
+        "y": 0.48,
+        "z": 5.7
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "distance": 0.20000000000000107,
+      "type": "image",
+      "image": "embedded_files/pins/qNUafuF60O1HMQ7YhFcgF",
+      "hasWebp": true
+    },
+    {
+      "id": "57NnvJ0VeJBgQIYzE99fq",
+      "position": {
+        "x": 17.47,
+        "y": 0.57,
+        "z": 2.27
+      },
+      "floor": "0",
+      "direction": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "distance": 0.1999999999999993,
+      "type": "image",
+      "image": "embedded_files/pins/ZvQcINNkCRgvhvlizLisJ",
+      "hasWebp": true
+    },
+    {
+      "id": "gsA-LY6cCH8c05pNEd9UF",
+      "position": {
+        "x": 4.59,
+        "y": 0.55,
+        "z": -7.18
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": -1
+      },
+      "distance": 0.1999999999999993,
+      "type": "image",
+      "image": "embedded_files/pins/pyPs309LmgN4tIqAI0WcL",
+      "hasWebp": true
+    },
+    {
+      "id": "Y-usHpjx06Pzrb5kahS-4",
+      "position": {
+        "x": -2.7,
+        "y": 0.67,
+        "z": -9.67
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 0,
+        "z": 1
+      },
+      "distance": 0.35600616618225445,
+      "type": "image",
+      "image": "embedded_files/pins/quA_qhlyNJeHOasr5obCl",
+      "hasWebp": true
+    },
+    {
+      "id": "tW9qxmcdjLM7-e8YdxKr3",
+      "position": {
+        "x": 16.97,
+        "y": 0.27,
+        "z": -2.62
+      },
+      "floor": "0",
+      "direction": {
+        "x": -1,
+        "y": 0,
+        "z": 0
+      },
+      "distance": 0.29154697341706637,
+      "type": "image",
+      "image": "embedded_files/pins/Q9MSGh3SYFyS8H9neaejx",
+      "hasWebp": true
+    },
+    {
+      "id": "XrIbQC--4npCDczNDFfVR",
+      "position": {
+        "x": "-15.29",
+        "y": "0.06",
+        "z": "6.15"
+      },
+      "floor": "0",
+      "direction": {
+        "x": "0.00",
+        "y": "0.00",
+        "z": "1.00"
+      },
+      "distance": 0.1999999999999993,
+      "type": "image",
+      "image": "embedded_files/pins/uU2bKR600JqEl28MIVmLo",
+      "hasWebp": true
+    },
+    {
+      "id": "Qg39IoxgT0mk87LITbxyS",
+      "position": {
+        "x": "16.14",
+        "y": "0.27",
+        "z": "5.00"
+      },
+      "floor": "0",
+      "direction": {
+        "x": "1.00",
+        "y": "0.00",
+        "z": "0.00"
+      },
+      "distance": 0.1999999999999993,
+      "type": "image",
+      "image": "embedded_files/pins/gxLUv7G3JRBSsVyKG4HDW",
+      "hasWebp": true
+    }
+  ],
+  "medias": [],
+  "models": [],
+  "hiddenComponents": [
+    "share"
+  ],
+  "startPositionId": "H_PQoeWUt5MkbBAIDzf4_",
+  "defaultPositionId": null,
+  "showTutorial": true,
+  "minimap": {
+    "isOpening": true,
+    "mode": "3d"
+  },
+  "splashId": "jMUEcfw95wCMJXb8KWQuN",
+  "iosFullScreenLink": "",
+  "isForcingFrontPanoramaSelection": false,
+  "highlightsAutoPlay": true,
+  "highlightsAutoPlayDelay": 3,
+  "highlightsAutoPlayLoop": false,
+  "buttonLayout": "split",
+  "config": {
+    "inside_max_angle": 62,
+    "inside_min_angle": -62
+  },
+  "security": {
+    "hash": null
+  },
+  "whiteLabelling": {
+    "isEnabled": true,
+    "website": "",
+    "logo": "embedded_files/whitelabelling/Ge4Ry98GE9EPCrs8OjZ9U",
+    "shortText": "Interiors3D",
+    "text": ""
+  },
+  "panoramas": [
+    {
+      "id": "0",
+      "isVisible": true
+    },
+    {
+      "id": "1",
+      "isVisible": true
+    },
+    {
+      "id": "2",
+      "isVisible": true
+    },
+    {
+      "id": "4",
+      "isVisible": true
+    },
+    {
+      "id": "5",
+      "isVisible": true
+    },
+    {
+      "id": "6",
+      "isVisible": true
+    },
+    {
+      "id": "7",
+      "isVisible": true
+    },
+    {
+      "id": "8",
+      "isVisible": true
+    },
+    {
+      "id": "9",
+      "isVisible": true
+    },
+    {
+      "id": "10",
+      "isVisible": true
+    },
+    {
+      "id": "11",
+      "isVisible": true
+    },
+    {
+      "id": "12",
+      "isVisible": true
+    },
+    {
+      "id": "13",
+      "isVisible": true
+    },
+    {
+      "id": "14",
+      "isVisible": true
+    },
+    {
+      "id": "15",
+      "isVisible": true
+    },
+    {
+      "id": "16",
+      "isVisible": true
+    },
+    {
+      "id": "17",
+      "isVisible": true
+    },
+    {
+      "id": "18",
+      "isVisible": true
+    },
+    {
+      "id": "19",
+      "isVisible": true
+    },
+    {
+      "id": "21",
+      "isVisible": true
+    },
+    {
+      "id": "22",
+      "isVisible": true
+    },
+    {
+      "id": "23",
+      "isVisible": true
+    },
+    {
+      "id": "24",
+      "isVisible": true
+    },
+    {
+      "id": "25",
+      "isVisible": true
+    },
+    {
+      "id": "26",
+      "isVisible": true
+    },
+    {
+      "id": "27",
+      "isVisible": true
+    },
+    {
+      "id": "28",
+      "isVisible": true
+    },
+    {
+      "id": "29",
+      "isVisible": true
+    },
+    {
+      "id": "30",
+      "isVisible": true
+    },
+    {
+      "id": "31",
+      "isVisible": true
+    },
+    {
+      "id": "32",
+      "isVisible": true
+    },
+    {
+      "id": "33",
+      "isVisible": true
+    },
+    {
+      "id": "34",
+      "isVisible": true
+    },
+    {
+      "id": "35",
+      "isVisible": true
+    },
+    {
+      "id": "36",
+      "isVisible": true
+    },
+    {
+      "id": "37",
+      "isVisible": true
+    },
+    {
+      "id": "39",
+      "isVisible": true
+    },
+    {
+      "id": "40",
+      "isVisible": true
+    },
+    {
+      "id": "41",
+      "isVisible": true
+    },
+    {
+      "id": "42",
+      "isVisible": true
+    },
+    {
+      "id": "43",
+      "isVisible": true
+    },
+    {
+      "id": "44",
+      "isVisible": true
+    },
+    {
+      "id": "45",
+      "isVisible": true
+    },
+    {
+      "id": "46",
+      "isVisible": true
+    },
+    {
+      "id": "47",
+      "isVisible": true
+    },
+    {
+      "id": "48",
+      "isVisible": true
+    },
+    {
+      "id": "49",
+      "isVisible": true
+    },
+    {
+      "id": "50",
+      "isVisible": true
+    },
+    {
+      "id": "52",
+      "isVisible": true
+    },
+    {
+      "id": "53",
+      "isVisible": true
+    },
+    {
+      "id": "54",
+      "isVisible": true
+    },
+    {
+      "id": "55",
+      "isVisible": true
+    },
+    {
+      "id": "56",
+      "isVisible": true
+    },
+    {
+      "id": "57",
+      "isVisible": true
+    },
+    {
+      "id": "58",
+      "isVisible": true
+    },
+    {
+      "id": "60",
+      "isVisible": true
+    },
+    {
+      "id": "61",
+      "isVisible": true
+    },
+    {
+      "id": "62",
+      "isVisible": true
+    },
+    {
+      "id": "63",
+      "isVisible": true
+    },
+    {
+      "id": "64",
+      "isVisible": true
+    },
+    {
+      "id": "65",
+      "isVisible": true
+    },
+    {
+      "id": "66",
+      "isVisible": true
+    },
+    {
+      "id": "67",
+      "isVisible": true
+    },
+    {
+      "id": "68",
+      "isVisible": true
+    },
+    {
+      "id": "69",
+      "isVisible": true
+    },
+    {
+      "id": "70",
+      "isVisible": true
+    },
+    {
+      "id": "71",
+      "isVisible": true
+    },
+    {
+      "id": "72",
+      "isVisible": true
+    },
+    {
+      "id": "73",
+      "isVisible": true
+    },
+    {
+      "id": "74",
+      "isVisible": true
+    },
+    {
+      "id": "75",
+      "isVisible": true
+    },
+    {
+      "id": "76",
+      "isVisible": true
+    },
+    {
+      "id": "77",
+      "isVisible": true
+    },
+    {
+      "id": "78",
+      "isVisible": true
+    },
+    {
+      "id": "79",
+      "isVisible": true
+    },
+    {
+      "id": "80",
+      "isVisible": true
+    },
+    {
+      "id": "81",
+      "isVisible": true
+    },
+    {
+      "id": "82",
+      "isVisible": true
+    },
+    {
+      "id": "84",
+      "isVisible": true
+    },
+    {
+      "id": "85",
+      "isVisible": true
+    },
+    {
+      "id": "86",
+      "isVisible": true
+    },
+    {
+      "id": "87",
+      "isVisible": true
+    },
+    {
+      "id": "88",
+      "isVisible": true
+    }
+  ],
+  "maxId": 0,
+  "photos": [],
+  "publishToSelfHosted": {
+    "config": ""
+  }
+}

@@ -18,10 +18,11 @@
    *          ...
    * ════════════════════════════════════════════════════════════════════════ */
 
-  var DEFAULT_TOUR_ID = 'Ia9teGNuMXei6WqP1rKIgw';
+  var DEFAULT_TOUR_ID = 'vkDhnv90NXq7P15ebi316g';
 
   var TOURS = [
-    { tourId: 'Ia9teGNuMXei6WqP1rKIgw', parentFolder: 'dist/TsAuIJ2_1EgOAQYPENXpB' }
+    { tourId: 'Ia9teGNuMXei6WqP1rKIgw', parentFolder: 'dist/TsAuIJ2_1EgOAQYPENXpB' },
+    { tourId: 'vkDhnv90NXq7P15ebi316g', parentFolder: 'dist' }
   ];
 
   /* ════════════════════════════════════════════════════════════════════════

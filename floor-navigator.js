@@ -36,7 +36,7 @@
     { l: '5F', tourId: 'Kfg81D95N_uwbMZDm4P_aQ', contentPath: 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP5/wLtzKTQ-vUfiL4eQpXgMY/', img: '5F_Q.png' },
     { l: '4F', tourId: 'NZDBUCHUNDCWB45khkfk7w', contentPath: 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP4/wLtzKTQ-vUfiL4eQpXgMY/', img: '4F_Q.png' },
     { l: '3F', tourId: 'psbalPABO22nlaPk2iL7wQ',  contentPath: 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP3/wLtzKTQ-vUfiL4eQpXgMY/', img: '3F_Q.png' },
-    { l: '2F', tourId: 'vkDhnv90NXq7P15ebi316g',  contentPath: 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Virtual+tours/SAP2/wLtzKTQ-vUfiL4eQpXgMY/', img: '2F_Q.png' },
+    { l: '2F', tourId: 'vkDhnv90NXq7P15ebi316g',  contentPath: 'https://eduardoallen02.github.io/dist/', img: '2F_Q.png' },
     { l: '1F', tourId: 'u16wb_b4P-S3qKWzk0agug',  contentPath: 'https://eduardoallen02.github.io/dist/TsAuIJ2_1EgOAQYPENXpB/', img: '1F_Q.png' },
     { l: 'GF', tourId: 'Ia9teGNuMXei6WqP1rKIgw',  contentPath: 'https://eduardoallen02.github.io/dist/TsAuIJ2_1EgOAQYPENXpB/', img: 'GF_Q.png' }
   ];
