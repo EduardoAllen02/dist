@@ -158,9 +158,9 @@ window.player.ready(function() {
    *         window.player.Api().Camera.get().then(s => console.log(s.angles.x))
    *    3. Pon ese valor en ALIGN_ANGLE_X.
    * ════════════════════════════════════════════════════════════════════ */
-  var ALIGN_ANGLE_X  = 180;     // ← CALIBRAR: azimut hacia "arriba" del plano
+  var ALIGN_ANGLE_X  = 180;   // ← CALIBRAR: azimut hacia "arriba" del plano
   var ALIGN_ANGLE_Y  = 0;     // sin inclinación vertical
-  var TRANSITION_MS  = 800;  // ms de espera para la rotación (≥ transition_time_max)
+  var TRANSITION_MS  = 1100;  // ms de espera para la rotación (≥ transition_time_max)
 
   var api     = window.player.Api();
   var GCV     = api.Common.getBowels().GCV;
@@ -190,10 +190,16 @@ window.player.ready(function() {
         transitionStyle: 'TRANSITION_STYLES/FLY',
       });
 
-      setTimeout(function() {
-        skipPre = true;
-        floorBtn.click();
-      }, TRANSITION_MS);
+      // Esperar a que la rotación termine (inTransform = false) antes de pasar al floorplan
+      var elapsed = 0;
+      var poll = setInterval(function() {
+        elapsed += 50;
+        if (!GCV.Transitions.isInTransition() || elapsed >= TRANSITION_MS) {
+          clearInterval(poll);
+          skipPre = true;
+          floorBtn.click();
+        }
+      }, 50);
 
     }, true);
 
