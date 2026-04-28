@@ -70,6 +70,7 @@
   };
 </script>
     <link rel="stylesheet" href="floor-navigator.css">
+    <script src="bridge.js"></script>
     <script src="player.js"></script>
     <script src="floor-navigator.js"></script>
     <div class="player" id="player"></div>
@@ -177,9 +178,31 @@
         configOptions
       )
 window.player.ready(function() {
+
+  /* ════════════════════════════════════════════════════════════════════
+   *  PRE-ROTATION CONFIG
+   *  Antes de entrar al floorplan, la cámara gira hacia ALIGN_ANGLE_X.
+   *
+   *  Cómo calibrar ALIGN_ANGLE_X:
+   *    1. Abre el tour en modo walk y gira hasta mirar hacia la dirección
+   *       que corresponde a "arriba" en el plano (en este tour: sur).
+   *    2. Abre la consola del navegador y ejecuta:
+   *         window.player.Api().Camera.get().then(s => console.log(s.angles.x))
+   *    3. Pon ese valor en ALIGN_ANGLE_X.
+   * ════════════════════════════════════════════════════════════════════ */
+  var ALIGN_ANGLE_X  = 180;   // ← CALIBRAR: azimut hacia "arriba" del plano
+  var ALIGN_ANGLE_Y  = 0;     // sin inclinación vertical
+  var TRANSITION_MS  = 1400;  // ms de espera para la rotación (≥ transition_time_max)
+
+  /* ── Refs ─────────────────────────────────────────────────────────── */
   var canvas = document.querySelector('#player canvas');
   if (!canvas) return;
 
+  var api    = window.player.Api();
+  var GCV    = api.Common.getBowels().GCV;
+  var skipPre = false;
+
+  /* ── Efectos CSS de flip ──────────────────────────────────────────── */
   function enterFloorPlan() {
     window.__isFloorPlan = true;
     canvas.style.transition = 'transform 0.4s ease';
@@ -192,6 +215,7 @@ window.player.ready(function() {
     canvas.style.transform  = 'none';
   }
 
+  /* ── Espera botones del player ────────────────────────────────────── */
   var interval = setInterval(function() {
     var walkingBtn = document.querySelector('span[title="Walking Mode"]');
     var btn3D      = document.querySelector('span[title="3D Mode"]');
@@ -199,22 +223,46 @@ window.player.ready(function() {
     if (!walkingBtn || !btn3D || !floorBtn) return;
     clearInterval(interval);
 
-    // Clicks en botones
+    /* ── Interceptor capture-phase: rota cámara antes del floorplan ── */
+    floorBtn.addEventListener('click', function(e) {
+      // Segunda pasada (programática): dejar pasar al listener del player
+      if (skipPre) { skipPre = false; return; }
+
+      // Solo aplica si estamos en modo walk/inside
+      var mode = GCV.Camera.currentMode && GCV.Camera.currentMode.name;
+      var walkActive = walkingBtn.className.includes('css-1yar5nb');
+      if (mode !== 'CAMERA_MODES/INSIDE' && !walkActive) return;
+
+      // Detener el evento — el listener del player NO se ejecutará aún
+      e.stopImmediatePropagation();
+
+      // Girar cámara al ángulo de alineación en el mismo panorama
+      api.Camera.set({
+        cameraMode:      'CAMERA_MODES/INSIDE',
+        panoramaId:      String(GCV.Panoramas.activeId),
+        angles:          { x: ALIGN_ANGLE_X, y: ALIGN_ANGLE_Y },
+        transitionStyle: 'TRANSITION_STYLES/FLY',
+      });
+
+      // Tras la rotación, re-disparar el click → ahora skipPre=true
+      setTimeout(function() {
+        skipPre = true;
+        floorBtn.click();
+      }, TRANSITION_MS);
+
+    }, true); // true = capture phase (se ejecuta ANTES del listener del player)
+
+    /* ── Listeners normales de modo ───────────────────────────────── */
     floorBtn.addEventListener('click',   enterFloorPlan);
     walkingBtn.addEventListener('click', exitFloorPlan);
     btn3D.addEventListener('click',      exitFloorPlan);
 
-    // Observer: detecta cambio de clase en cualquier botón
+    /* ── Observer: detecta cambio de modo por métodos alternativos ── */
     var observer = new MutationObserver(function() {
       if (!window.__isFloorPlan) return;
-
-      // Si walking se activa por cualquier método (pin, doble click, etc)
       var walkIsActive  = walkingBtn.className.includes('css-1yar5nb');
       var floorIsActive = floorBtn.className.includes('css-1nmeqo3');
-
-      if (!floorIsActive && walkIsActive) {
-        exitFloorPlan();
-      }
+      if (!floorIsActive && walkIsActive) exitFloorPlan();
     });
 
     [walkingBtn, btn3D, floorBtn].forEach(function(btn) {
