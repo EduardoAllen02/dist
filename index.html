@@ -167,12 +167,14 @@ window.player.ready(function() {
     if (fpc && fpc.floors && fpc.floors.length) {
       var m = fpc.floors[0].matrixWorld;
       if (m && m.elements) {
-        _cachedAlignX = (180 * Math.atan2(m.elements[8], m.elements[10])) / Math.PI;
+        // +180 because the formula gives the floor's Z-axis direction;
+        // we need the opposite (where the inside camera should face).
+        _cachedAlignX = (180 * Math.atan2(m.elements[8], m.elements[10])) / Math.PI + 180;
         console.log('[preRotate] ALIGN_ANGLE_X auto:', _cachedAlignX.toFixed(1) + '°');
         return _cachedAlignX;
       }
     }
-    console.warn('[preRotate] FloorPlanController not ready, using 180° fallback');
+    console.log('[preRotate] FloorPlanController not ready, using 180° fallback');
     return 180;
   }
 
