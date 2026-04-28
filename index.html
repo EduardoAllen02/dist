@@ -147,24 +147,34 @@
       )
 window.player.ready(function() {
 
-  /* ════════════════════════════════════════════════════════════════════
-   *  PRE-ROTATION CONFIG
-   *  Antes de entrar al floorplan, la cámara gira hacia ALIGN_ANGLE_X.
-   *
-   *  Cómo calibrar ALIGN_ANGLE_X:
-   *    1. Abre el tour en modo walk y gira hasta mirar hacia la dirección
-   *       que corresponde a "arriba" en el plano (en este tour: sur).
-   *    2. Abre la consola del navegador y ejecuta:
-   *         window.player.Api().Camera.get().then(s => console.log(s.angles.x))
-   *    3. Pon ese valor en ALIGN_ANGLE_X.
-   * ════════════════════════════════════════════════════════════════════ */
-  var ALIGN_ANGLE_X  = 180;   // ← CALIBRAR: azimut hacia "arriba" del plano
-  var ALIGN_ANGLE_Y  = 0;     // sin inclinación vertical
-  var TRANSITION_MS  = 1100;  // ms de espera para la rotación (≥ transition_time_max)
+  var ALIGN_ANGLE_Y  = 0;
+  var TRANSITION_MS  = 1100;
 
   var api     = window.player.Api();
   var GCV     = api.Common.getBowels().GCV;
   var skipPre = false;
+
+  /* ── Auto-detect alignment angle from floor matrixWorld ──────────────
+   * Replicates app.js's formula: (180 * atan2(b.x, b.z)) / PI
+   * where b = world-space Z-axis of FloorPlanController.floors[0].
+   * In a column-major Matrix4: col-2 = elements[8..10] = world Z-axis.
+   * Falls back to 180 if the controller isn't ready yet.
+   * ─────────────────────────────────────────────────────────────────── */
+  var _cachedAlignX = null;
+  function getAlignAngleX() {
+    if (_cachedAlignX !== null) return _cachedAlignX;
+    var fpc = GCV.FloorPlanController;
+    if (fpc && fpc.floors && fpc.floors.length) {
+      var m = fpc.floors[0].matrixWorld;
+      if (m && m.elements) {
+        _cachedAlignX = (180 * Math.atan2(m.elements[8], m.elements[10])) / Math.PI;
+        console.log('[preRotate] ALIGN_ANGLE_X auto:', _cachedAlignX.toFixed(1) + '°');
+        return _cachedAlignX;
+      }
+    }
+    console.warn('[preRotate] FloorPlanController not ready, using 180° fallback');
+    return 180;
+  }
 
   /* ── Espera botones del player ────────────────────────────────────── */
   var interval = setInterval(function() {
@@ -186,7 +196,7 @@ window.player.ready(function() {
       api.Camera.set({
         cameraMode:      'CAMERA_MODES/INSIDE',
         panoramaId:      String(GCV.Panoramas.activeId),
-        angles:          { x: ALIGN_ANGLE_X, y: ALIGN_ANGLE_Y },
+        angles:          { x: getAlignAngleX(), y: ALIGN_ANGLE_Y },
         transitionStyle: 'TRANSITION_STYLES/FLY',
       });
 
