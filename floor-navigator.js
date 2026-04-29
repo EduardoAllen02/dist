@@ -6,7 +6,7 @@
   var DIST_BASE = 'https://eduardoallen02.github.io/dist/';
 
   var HOME_URL         = 'https://TU-LANDING.com/';
-  var IMG_BASE         = 'https://virtualtours3d.s3.eu-west-1.amazonaws.com/SAP/Java+SAP/buttons/';
+  var IMG_BASE         = 'https://eduardoallen02.github.io/dist/buttons/';
   var BRIGHTNESS_HOVER = 1.3;
 
   var NAV_TOP_DESKTOP  = 2;
