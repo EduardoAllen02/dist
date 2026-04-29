@@ -1,0 +1,1167 @@
+{
+  "positions": [
+    {
+      "id": "START_POSITION",
+      "cameraMode": "CAMERA_MODES/DOLLHOUSE"
+    },
+    {
+      "is360": false,
+      "position": {
+        "x": 0.8432827715869544,
+        "y": 1.5488991134563719,
+        "z": 3.4535987453570574
+      },
+      "angles": {
+        "x": 181.88052143172447,
+        "y": 0.1445019940541789
+      },
+      "view": {
+        "x": -0.03281529387273589,
+        "y": 0.0025220328983069713,
+        "z": -0.9994582511731572
+      },
+      "panoramaView": {
+        "x": 0.6726642473739051,
+        "y": -0.006681364961728333,
+        "z": -0.7399176776284953
+      },
+      "panoramaId": "46",
+      "fov": 70,
+      "cameraMode": "CAMERA_MODES/INSIDE",
+      "id": "4SscnmbYD7jok9G6mht7z"
+    }
+  ],
+  "tristan": {
+    "description": "",
+    "image": "",
+    "name": ""
+  },
+  "address": {
+    "area": "",
+    "country": "",
+    "county": "",
+    "latitude": "",
+    "longitude": "",
+    "postcode": "",
+    "street": "",
+    "town": "",
+    "state": ""
+  },
+  "company": {
+    "id": "",
+    "logo": "",
+    "title": "",
+    "contacts": [
+      {
+        "type": "phone",
+        "value": ""
+      }
+    ]
+  },
+  "price": {
+    "currency": "USD",
+    "value": ""
+  },
+  "rooms": {
+    "amount": "",
+    "bathrooms": "",
+    "bedrooms": ""
+  },
+  "social": {
+    "description": "",
+    "title": "Sap 6th FL"
+  },
+  "squaring": {
+    "unit": "sqft",
+    "value": ""
+  },
+  "description": "",
+  "persons": [
+    {
+      "firstName": "",
+      "lastName": "",
+      "photo": "",
+      "contacts": [
+        {
+          "type": "phone",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "highlights": [
+    {
+      "id": "L3TBjnoqO08IyNHCBIhtM",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": 12.09931948263231,
+          "y": 1.5313356765001649,
+          "z": 1.6189891108074719
+        },
+        "angles": {
+          "x": -754.0837441860014,
+          "y": -1.8989146956745822
+        },
+        "view": {
+          "x": -0.5600962874574248,
+          "y": -0.033136246662797846,
+          "z": 0.8277645425684239
+        },
+        "panoramaView": {
+          "x": 0.3689751584909865,
+          "y": 0.03182719973692779,
+          "z": 0.9288941606951018
+        },
+        "panoramaId": "22",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "MR Lava lamp"
+    },
+    {
+      "id": "m6VR8ssbZXNRhizsfwVqi",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": 15.941699348205418,
+          "y": 1.5327391999210338,
+          "z": -0.1669911163576137
+        },
+        "angles": {
+          "x": -944.9282698544439,
+          "y": -5.944345706960892
+        },
+        "view": {
+          "x": 0.702423602576877,
+          "y": -0.10356238461123923,
+          "z": -0.7041845745516976
+        },
+        "panoramaView": {
+          "x": 0.9902260643605083,
+          "y": 0.10320657827267886,
+          "z": 0.09381227884634219
+        },
+        "panoramaId": "10",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Flex space"
+    },
+    {
+      "id": "KJMalAr86D84PVheyiOep",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": 17.680415177279972,
+          "y": 1.538267363751215,
+          "z": 0.9110847723755601
+        },
+        "angles": {
+          "x": -1059.629992124235,
+          "y": -3.6499529837058966
+        },
+        "view": {
+          "x": 0.3473753224198115,
+          "y": -0.06366061920697857,
+          "z": 0.9355627776562705
+        },
+        "panoramaView": {
+          "x": 0.5223982907076047,
+          "y": 0.06342370138983157,
+          "z": 0.8503396144881095
+        },
+        "panoramaId": "6",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Priority room Nesso"
+    },
+    {
+      "id": "K_XIILapld5iKD2j9cl0V",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": 15.86796730827741,
+          "y": 1.5357713276741434,
+          "z": 1.7980196805257924
+        },
+        "angles": {
+          "x": -1097.8510699383205,
+          "y": 0.7099969366916957
+        },
+        "view": {
+          "x": -0.3065203174981486,
+          "y": 0.01239146708732252,
+          "z": 0.9517834556789995
+        },
+        "panoramaView": {
+          "x": -0.052336068707580244,
+          "y": -0.011912960872867574,
+          "z": 0.9985584696328386
+        },
+        "panoramaId": "11",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Priority room Sacco"
+    },
+    {
+      "id": "UR_4XeoNbVVIJXiBTPsZe",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": 6.946032831795951,
+          "y": 1.5495397352670146,
+          "z": -0.3775506644712554
+        },
+        "angles": {
+          "x": -1233.4236767202362,
+          "y": -3.7162422551631527
+        },
+        "view": {
+          "x": -0.4464488193061821,
+          "y": -0.06481519560449907,
+          "z": -0.8924586501115146
+        },
+        "panoramaView": {
+          "x": 0.797338039248491,
+          "y": 0.06464380399184355,
+          "z": 0.6000610217076565
+        },
+        "panoramaId": "37",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Break Area"
+    },
+    {
+      "id": "0STVc7LQg7C2kpCXSFz-3",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": 12.854487559993386,
+          "y": 1.5338374907595653,
+          "z": -2.185588240605075
+        },
+        "angles": {
+          "x": -1299.6101623472032,
+          "y": -1.5311397411064707
+        },
+        "view": {
+          "x": 0.6373330021230698,
+          "y": -0.026720249184751414,
+          "z": -0.7701251019725951
+        },
+        "panoramaView": {
+          "x": 0.8112261687621052,
+          "y": 0.02652092321593071,
+          "z": 0.5841307591176235
+        },
+        "panoramaId": "18",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Priority room Arco"
+    },
+    {
+      "id": "bAfiYa-vNTaKfYWZe4Cg1",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": 10.934078020215978,
+          "y": 1.530948376569097,
+          "z": -2.3286047665118637
+        },
+        "angles": {
+          "x": -1224.8353268661278,
+          "y": -9.954413329105652
+        },
+        "view": {
+          "x": -0.5672581246210208,
+          "y": -0.17286457280588116,
+          "z": -0.8051931814913009
+        },
+        "panoramaView": {
+          "x": 0.1463554971061199,
+          "y": 0.17430838673182567,
+          "z": 0.9737538984680726
+        },
+        "panoramaId": "31",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Priority room Tulip"
+    },
+    {
+      "id": "JXFn2n7_WBNLwPyR7uE71",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -8.803942833152574,
+          "y": 1.5416922265961535,
+          "z": 2.1085024696474286
+        },
+        "angles": {
+          "x": -1403.3096356621859,
+          "y": -7.834465655240547
+        },
+        "view": {
+          "x": 0.5919133399551405,
+          "y": -0.13631152147057404,
+          "z": 0.7943914445017188
+        },
+        "panoramaView": {
+          "x": 0.7702420341940417,
+          "y": 0.13975579457856666,
+          "z": 0.6222503729547605
+        },
+        "panoramaId": "62",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Priority room Atollo"
+    },
+    {
+      "id": "AJvjqCgTlvOLcHRPm4nWb",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -10.587832698300241,
+          "y": 1.551058992620101,
+          "z": 3.4028034280460067
+        },
+        "angles": {
+          "x": -1491.2693017803608,
+          "y": -0.280460347354475
+        },
+        "view": {
+          "x": -0.7800859539392251,
+          "y": -0.0048949369349644365,
+          "z": 0.62565321389659
+        },
+        "panoramaView": {
+          "x": 0.5736251893595045,
+          "y": 0.004492774073873308,
+          "z": 0.8191055836175178
+        },
+        "panoramaId": "66",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Priority room RR-126"
+    },
+    {
+      "id": "UzqsD-khbCofdrCEwh3vg",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -10.628901832243278,
+          "y": 1.5482818276494579,
+          "z": -1.6557297529103516
+        },
+        "angles": {
+          "x": -1590.4129180418456,
+          "y": -0.4859787960156096
+        },
+        "view": {
+          "x": -0.49372805494483896,
+          "y": -0.008481828382938395,
+          "z": -0.8695749917906269
+        },
+        "panoramaView": {
+          "x": -0.18471513360510755,
+          "y": 0.007625841295796601,
+          "z": 0.9827625175808137
+        },
+        "panoramaId": "57",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Priority room Cactus"
+    },
+    {
+      "id": "otUFeRjjBo1KCjcLKL45_",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -13.9180375588604,
+          "y": 1.5431792030581708,
+          "z": -1.8564443738339071
+        },
+        "angles": {
+          "x": -1599.438972774476,
+          "y": -2.4831639911794086
+        },
+        "view": {
+          "x": -0.3508750734792514,
+          "y": -0.04332582137378115,
+          "z": -0.9354194545834597
+        },
+        "panoramaView": {
+          "x": 0.35681721453448917,
+          "y": 0.04322939248910617,
+          "z": 0.9331734538856488
+        },
+        "panoramaId": "73",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Priority room Ultrafragola"
+    },
+    {
+      "id": "tkiSNn3KaGtXUsBJHkUcJ",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -16.53986532743574,
+          "y": 1.544658489971981,
+          "z": 1.6511172597616808
+        },
+        "angles": {
+          "x": -1488.9215382710786,
+          "y": -3.310871012771058
+        },
+        "view": {
+          "x": -0.7525522528750671,
+          "y": -0.05775344627280996,
+          "z": 0.655995157098187
+        },
+        "panoramaView": {
+          "x": 0.7633199527180904,
+          "y": 0.05686529158321301,
+          "z": 0.6435130056149672
+        },
+        "panoramaId": "79",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Priority room Pratone"
+    },
+    {
+      "id": "m7Fi7oUhYQxTnqNWAuu98",
+      "place": {
+        "is360": false,
+        "position": {
+          "x": -17.459106735901177,
+          "y": 1.5497376350107714,
+          "z": -0.8032411220533154
+        },
+        "angles": {
+          "x": -1603.6084186838907,
+          "y": -8.38567984962764
+        },
+        "view": {
+          "x": -0.27918343993713796,
+          "y": -0.14583577143523324,
+          "z": -0.9490988013029819
+        },
+        "panoramaView": {
+          "x": 0.685080937392758,
+          "y": 0.1478997640156718,
+          "z": 0.7132950084117851
+        },
+        "panoramaId": "84",
+        "fov": 70,
+        "cameraMode": "CAMERA_MODES/INSIDE"
+      },
+      "title": "Hot Desk Area"
+    }
+  ],
+  "tags": [
+    {
+      "id": "78JJ2E4f8SvTNds2gry7C",
+      "position": {
+        "x": 0.75,
+        "y": 0,
+        "z": 0.91
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.38692845100655804,
+      "type": "image",
+      "image": "embedded_files/pins/yTeKa9JCNINRNxLJ9NSlk",
+      "hasWebp": true
+    },
+    {
+      "id": "iH3FCk6LHnFK5aQmNfCiB",
+      "position": {
+        "x": 12.57,
+        "y": -0.02,
+        "z": 1.86
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.2702790647226293,
+      "type": "image",
+      "image": "embedded_files/pins/6ish__8iln376asjFmyDP",
+      "hasWebp": true
+    },
+    {
+      "id": "v36Z4_C7EVezS1fb-_ZxE",
+      "position": {
+        "x": 15.21,
+        "y": 0,
+        "z": 1.73
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.26673100356204277,
+      "type": "image",
+      "image": "embedded_files/pins/hS_HDIgfDoupgHEcZ1Hbf",
+      "hasWebp": true
+    },
+    {
+      "id": "d5sgSuNZB15VqSVFIzRc7",
+      "position": {
+        "x": 18.14,
+        "y": 0,
+        "z": 1.46
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.277067852522575,
+      "type": "image",
+      "image": "embedded_files/pins/-KQu61_gix9lrjmEYunSY",
+      "hasWebp": true
+    },
+    {
+      "id": "NwGjz5YHgdWgbPyHkOJ6E",
+      "position": {
+        "x": 13.67,
+        "y": 0,
+        "z": -2.51
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.3318437999291084,
+      "type": "image",
+      "image": "embedded_files/pins/47KjcqeN4mgYPTrJdYJd0",
+      "hasWebp": true
+    },
+    {
+      "id": "0LmYvab6mYxmisLueiiY7",
+      "position": {
+        "x": 10.3,
+        "y": -0.02,
+        "z": -2.53
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.22001559403241416,
+      "type": "image",
+      "image": "embedded_files/pins/64Shwq_6IMJ7MZJV_LamV",
+      "hasWebp": true
+    },
+    {
+      "id": "dxjyEjD9Nwr8w0EI3Zowa",
+      "position": {
+        "x": -11.18,
+        "y": 0,
+        "z": -2.33
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.2000000000000001,
+      "type": "image",
+      "image": "embedded_files/pins/ADza0vuq_Rzgem4KN2SPA",
+      "hasWebp": true
+    },
+    {
+      "id": "Wy5Xzf4riZ0Z35q06-n9C",
+      "position": {
+        "x": -14.46,
+        "y": -0.02,
+        "z": -2.12
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.19999999999999965,
+      "type": "image",
+      "image": "embedded_files/pins/E-2bL73lsIwE1R_kWJUn4",
+      "hasWebp": true
+    },
+    {
+      "id": "BPF7az6cx-OlRr82SFkAQ",
+      "position": {
+        "x": 6.51,
+        "y": 0,
+        "z": -5.01
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.19999999999999965,
+      "type": "image",
+      "image": "embedded_files/pins/zQeFxylPtMRaWwvxfgI9H",
+      "hasWebp": true
+    },
+    {
+      "id": "so2ZY5Uu_9uPXZJebgtfj",
+      "position": {
+        "x": -18.54,
+        "y": 0.02,
+        "z": -2.64
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.22723722031985188,
+      "type": "image",
+      "image": "embedded_files/pins/nK9Vw_b6iZyhG3OyvpV2V",
+      "hasWebp": true
+    },
+    {
+      "id": "DrYk10cNXFloeYA0uv-Jb",
+      "position": {
+        "x": -17.43,
+        "y": 0.02,
+        "z": 2.38
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.24128109046104987,
+      "type": "image",
+      "image": "embedded_files/pins/I5N1HwNQ727Jl5-hEhf74",
+      "hasWebp": true
+    },
+    {
+      "id": "blZLvKaacZHI_LIYiuGjv",
+      "position": {
+        "x": -10.91,
+        "y": 0,
+        "z": 3.33
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.24890179323646833,
+      "type": "image",
+      "image": "embedded_files/pins/knIE8FvL8CZ5Z3VwKS5fj",
+      "hasWebp": true
+    },
+    {
+      "id": "-9ybKVbVHd_mwYKYJc00B",
+      "position": {
+        "x": -18.25,
+        "y": 0.01,
+        "z": 3.98
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.19999999999999987,
+      "type": "custom",
+      "image": "embedded_files/pins/U_J7L5h9IE8T_Rbo9-X_v",
+      "hasWebp": true,
+      "javascript": "function load() {\n  var base = 'https://eduardoallen02.github.io/floor-navigato/';\n  var h = document.head;\n  var s = document.createElement('script');\n  s.src = base + 'floor-navigator.js?v=' + Date.now();\n  h.appendChild(s);\n  var l = document.createElement('link');\n  l.rel = 'stylesheet';\n  l.href = base + 'floor-navigator.css?v=' + Date.now();\n  h.appendChild(l);\n}\nload();",
+      "content": "<span id=\"fn-cfg\" data-floor=\"6F\" style=\"display:none\"></span>"
+    },
+    {
+      "id": "07_shLHeijrg-pdGt5-SW",
+      "position": {
+        "x": -7.62,
+        "y": -0.02,
+        "z": 1.46
+      },
+      "floor": "0",
+      "direction": {
+        "x": 0,
+        "y": 1,
+        "z": 0
+      },
+      "distance": 0.3206017127402811,
+      "type": "image",
+      "image": "embedded_files/pins/6xo4jTa5dqokMtXwWoqDH",
+      "hasWebp": true
+    },
+    {
+      "id": "yHGZbZJY4X-V3yrcl2hB-",
+      "position": {
+        "x": 4.89,
+        "y": 0.58,
+        "z": -1.48
+      },
+      "floor": "0",
+      "direction": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "distance": 0.297381894725004,
+      "type": "image",
+      "image": "embedded_files/pins/v5ffIkqUQ3M04Lt_VocWD",
+      "hasWebp": true
+    },
+    {
+      "id": "WR5j8JxYpOsypdyWIuHlG",
+      "position": {
+        "x": 4.88,
+        "y": 0.19,
+        "z": -4.76
+      },
+      "floor": "0",
+      "direction": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "distance": 0.2722637226380993,
+      "type": "image",
+      "image": "embedded_files/pins/-2gQGaw4pjm5_6ZLX2ZZB",
+      "hasWebp": true
+    },
+    {
+      "id": "hZsDnwt46civvRuyQEZZJ",
+      "position": {
+        "x": "-5.75",
+        "y": "0.21",
+        "z": "0.86"
+      },
+      "floor": "0",
+      "direction": {
+        "x": "1.00",
+        "y": "0.00",
+        "z": "0.00"
+      },
+      "distance": 0.44183792755435825,
+      "type": "image",
+      "image": "embedded_files/pins/EmpVEr_1Ue3nzOMaqMhSX",
+      "hasWebp": true
+    },
+    {
+      "id": "j4YmXgsFbf2-Bem_QTnZO",
+      "position": {
+        "x": "-14.76",
+        "y": "0.16",
+        "z": "1.02"
+      },
+      "floor": "0",
+      "direction": {
+        "x": "1.00",
+        "y": "0.00",
+        "z": "0.00"
+      },
+      "distance": 0.22028290217717839,
+      "type": "image",
+      "image": "embedded_files/pins/uMeNDXo8pzKIMgeoCS8bP",
+      "hasWebp": true
+    }
+  ],
+  "medias": [],
+  "models": [],
+  "hiddenComponents": [
+    "share"
+  ],
+  "startPositionId": "4SscnmbYD7jok9G6mht7z",
+  "defaultPositionId": null,
+  "showTutorial": true,
+  "minimap": {
+    "isOpening": true,
+    "mode": "3d"
+  },
+  "splashId": "Z_lpSOuUJFG6055WL6QWw",
+  "iosFullScreenLink": "",
+  "isForcingFrontPanoramaSelection": false,
+  "highlightsAutoPlay": true,
+  "highlightsAutoPlayDelay": 3,
+  "highlightsAutoPlayLoop": false,
+  "buttonLayout": "split",
+  "config": {
+    "inside_max_angle": 62,
+    "inside_min_angle": -62
+  },
+  "security": {
+    "hash": null
+  },
+  "whiteLabelling": {
+    "isEnabled": true,
+    "website": "",
+    "logo": "embedded_files/whitelabelling/W4eCRNdvh1yKEUifKToco",
+    "shortText": "Interiors3D",
+    "text": ""
+  },
+  "panoramas": [
+    {
+      "id": "0",
+      "isVisible": true
+    },
+    {
+      "id": "1",
+      "isVisible": true
+    },
+    {
+      "id": "2",
+      "isVisible": true
+    },
+    {
+      "id": "3",
+      "isVisible": true
+    },
+    {
+      "id": "4",
+      "isVisible": true
+    },
+    {
+      "id": "5",
+      "isVisible": true
+    },
+    {
+      "id": "6",
+      "isVisible": true
+    },
+    {
+      "id": "7",
+      "isVisible": true
+    },
+    {
+      "id": "8",
+      "isVisible": true
+    },
+    {
+      "id": "9",
+      "isVisible": true
+    },
+    {
+      "id": "10",
+      "isVisible": true
+    },
+    {
+      "id": "11",
+      "isVisible": true
+    },
+    {
+      "id": "12",
+      "isVisible": true
+    },
+    {
+      "id": "13",
+      "isVisible": true
+    },
+    {
+      "id": "15",
+      "isVisible": true
+    },
+    {
+      "id": "16",
+      "isVisible": true
+    },
+    {
+      "id": "17",
+      "isVisible": true
+    },
+    {
+      "id": "18",
+      "isVisible": true
+    },
+    {
+      "id": "19",
+      "isVisible": true
+    },
+    {
+      "id": "20",
+      "isVisible": true
+    },
+    {
+      "id": "21",
+      "isVisible": true
+    },
+    {
+      "id": "22",
+      "isVisible": true
+    },
+    {
+      "id": "23",
+      "isVisible": true
+    },
+    {
+      "id": "24",
+      "isVisible": true
+    },
+    {
+      "id": "25",
+      "isVisible": true
+    },
+    {
+      "id": "26",
+      "isVisible": true
+    },
+    {
+      "id": "27",
+      "isVisible": true
+    },
+    {
+      "id": "28",
+      "isVisible": true
+    },
+    {
+      "id": "29",
+      "isVisible": true
+    },
+    {
+      "id": "30",
+      "isVisible": true
+    },
+    {
+      "id": "31",
+      "isVisible": true
+    },
+    {
+      "id": "32",
+      "isVisible": true
+    },
+    {
+      "id": "34",
+      "isVisible": true
+    },
+    {
+      "id": "35",
+      "isVisible": true
+    },
+    {
+      "id": "36",
+      "isVisible": true
+    },
+    {
+      "id": "37",
+      "isVisible": true
+    },
+    {
+      "id": "38",
+      "isVisible": true
+    },
+    {
+      "id": "39",
+      "isVisible": true
+    },
+    {
+      "id": "40",
+      "isVisible": true
+    },
+    {
+      "id": "41",
+      "isVisible": true
+    },
+    {
+      "id": "42",
+      "isVisible": true
+    },
+    {
+      "id": "43",
+      "isVisible": true
+    },
+    {
+      "id": "44",
+      "isVisible": true
+    },
+    {
+      "id": "45",
+      "isVisible": true
+    },
+    {
+      "id": "46",
+      "isVisible": true
+    },
+    {
+      "id": "47",
+      "isVisible": true
+    },
+    {
+      "id": "48",
+      "isVisible": true
+    },
+    {
+      "id": "50",
+      "isVisible": true
+    },
+    {
+      "id": "51",
+      "isVisible": true
+    },
+    {
+      "id": "52",
+      "isVisible": true
+    },
+    {
+      "id": "54",
+      "isVisible": true
+    },
+    {
+      "id": "55",
+      "isVisible": true
+    },
+    {
+      "id": "57",
+      "isVisible": true
+    },
+    {
+      "id": "58",
+      "isVisible": true
+    },
+    {
+      "id": "59",
+      "isVisible": true
+    },
+    {
+      "id": "60",
+      "isVisible": true
+    },
+    {
+      "id": "61",
+      "isVisible": true
+    },
+    {
+      "id": "62",
+      "isVisible": true
+    },
+    {
+      "id": "63",
+      "isVisible": true
+    },
+    {
+      "id": "64",
+      "isVisible": true
+    },
+    {
+      "id": "65",
+      "isVisible": true
+    },
+    {
+      "id": "66",
+      "isVisible": true
+    },
+    {
+      "id": "67",
+      "isVisible": true
+    },
+    {
+      "id": "68",
+      "isVisible": true
+    },
+    {
+      "id": "69",
+      "isVisible": true
+    },
+    {
+      "id": "70",
+      "isVisible": true
+    },
+    {
+      "id": "72",
+      "isVisible": true
+    },
+    {
+      "id": "73",
+      "isVisible": true
+    },
+    {
+      "id": "74",
+      "isVisible": true
+    },
+    {
+      "id": "75",
+      "isVisible": true
+    },
+    {
+      "id": "77",
+      "isVisible": true
+    },
+    {
+      "id": "79",
+      "isVisible": true
+    },
+    {
+      "id": "80",
+      "isVisible": true
+    },
+    {
+      "id": "81",
+      "isVisible": true
+    },
+    {
+      "id": "82",
+      "isVisible": true
+    },
+    {
+      "id": "83",
+      "isVisible": true
+    },
+    {
+      "id": "84",
+      "isVisible": true
+    },
+    {
+      "id": "85",
+      "isVisible": true
+    },
+    {
+      "id": "86",
+      "isVisible": true
+    },
+    {
+      "id": "88",
+      "isVisible": true
+    },
+    {
+      "id": "90",
+      "isVisible": true
+    },
+    {
+      "id": "91",
+      "isVisible": true
+    }
+  ],
+  "maxId": 0,
+  "photos": [],
+  "publishToSelfHosted": {
+    "config": ""
+  }
+}
