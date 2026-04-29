@@ -18,12 +18,12 @@
    *          ...
    * ════════════════════════════════════════════════════════════════════════ */
 
-  var DEFAULT_TOUR_ID = 'wV5SCfUwM1aL97_D0bE9tQ';
+  var DEFAULT_TOUR_ID = 'SsZAVZjTPJqFki4tohl1rQ';
 
   var TOURS = [
     { tourId: 'Ia9teGNuMXei6WqP1rKIgw', parentFolder: 'dist/TsAuIJ2_1EgOAQYPENXpB' },
     { tourId: 'vkDhnv90NXq7P15ebi316g', parentFolder: 'dist' },
-    { tourId: 'wV5SCfUwM1aL97_D0bE9tQ', parentFolder: 'dist' }
+    { tourId: 'SsZAVZjTPJqFki4tohl1rQ', parentFolder: 'dist' }
   ];
 
   /* ════════════════════════════════════════════════════════════════════════
