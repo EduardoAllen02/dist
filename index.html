@@ -150,9 +150,36 @@ window.player.ready(function() {
   var ALIGN_ANGLE_Y  = 0;
   var TRANSITION_MS  = 1100;
 
+  var ROTATED_FLOORS = ['GF', '2F', '3F', '4F'];
+  var FLOOR_TOUR_MAP = {
+    'SsZAVZjTPJqFki4tohl1rQ': '6F',
+    'Kfg81D95N_uwbMZDm4P_aQ': '5F',
+    'NZDBUCHUNDCWB45khkfk7w': '4F',
+    'psbalPABO22nlaPk2iL7wQ': '3F',
+    'vkDhnv90NXq7P15ebi316g': '2F',
+    'u16wb_b4P-S3qKWzk0agug': '1F',
+    'Ia9teGNuMXei6WqP1rKIgw': 'GF'
+  };
+
   var api     = window.player.Api();
   var GCV     = api.Common.getBowels().GCV;
   var skipPre = false;
+
+  function applyFloorPlanRotation() {
+    var tourId = new URLSearchParams(window.location.search).get('tour');
+    var label  = FLOOR_TOUR_MAP[tourId];
+    if (!label || ROTATED_FLOORS.indexOf(label) === -1) return;
+    var fpc = GCV.FloorPlanController;
+    if (fpc && fpc.floors && fpc.floors.length) {
+      fpc.floors[0].rotation.y = Math.PI;
+      if (typeof fpc.floors[0].updateMatrixWorld === 'function') {
+        fpc.floors[0].updateMatrixWorld(true);
+      }
+    } else {
+      setTimeout(applyFloorPlanRotation, 200);
+    }
+  }
+  applyFloorPlanRotation();
 
   /* ── Auto-detect alignment angle from floor matrixWorld ──────────────
    * Replicates app.js's formula: (180 * atan2(b.x, b.z)) / PI
