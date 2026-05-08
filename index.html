@@ -165,24 +165,10 @@ window.player.ready(function() {
   var GCV     = api.Common.getBowels().GCV;
   var skipPre = false;
 
-  function applyFloorPlanRotation(attempts) {
-    attempts = attempts || 0;
-    var tourId = new URLSearchParams(window.location.search).get('tour');
-    var label  = FLOOR_TOUR_MAP[tourId];
-    if (!label || ROTATED_FLOORS.indexOf(label) === -1) return;
-    var fpc = GCV.FloorPlanController;
-    if (fpc && fpc.floors && fpc.floors.length) {
-      fpc.floors[0].children.forEach(function(child) {
-        child.rotation.y += Math.PI;
-        if (typeof child.updateMatrixWorld === 'function') {
-          child.updateMatrixWorld(true);
-        }
-      });
-    } else if (attempts < 30) {
-      setTimeout(function() { applyFloorPlanRotation(attempts + 1); }, 200);
-    }
+  function needsRotation() {
+    var label = FLOOR_TOUR_MAP[new URLSearchParams(window.location.search).get('tour')];
+    return !!label && ROTATED_FLOORS.indexOf(label) !== -1;
   }
-  applyFloorPlanRotation();
 
   /* ── Auto-detect alignment angle from floor matrixWorld ──────────────
    * Replicates app.js's formula: (180 * atan2(b.x, b.z)) / PI
@@ -228,7 +214,7 @@ window.player.ready(function() {
       api.Camera.set({
         cameraMode:      'CAMERA_MODES/INSIDE',
         panoramaId:      String(GCV.Panoramas.activeId),
-        angles:          { x: getAlignAngleX(), y: ALIGN_ANGLE_Y },
+        angles:          { x: getAlignAngleX() + (needsRotation() ? 180 : 0), y: ALIGN_ANGLE_Y },
         transitionStyle: 'TRANSITION_STYLES/FLY',
       });
 
