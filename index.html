@@ -170,6 +170,24 @@ window.player.ready(function() {
     return !!label && ROTATED_FLOORS.indexOf(label) !== -1;
   }
 
+  /* ── Patch FLOORPLAN camera updateView para pisos rotados ────────────
+   * updateView() corre cada frame y recalcula la view matrix desde
+   * floors[0].matrixWorld. Negando las columnas X e Y rotamos la vista
+   * 180° sobre el eje forward sin tocar el modelo ni la geometría.
+   * ─────────────────────────────────────────────────────────────────── */
+  if (needsRotation()) {
+    var fpCam = GCV.Camera.modes['CAMERA_MODES/FLOORPLAN'];
+    if (fpCam && typeof fpCam.updateView === 'function') {
+      var _origUpdateView = fpCam.updateView.bind(fpCam);
+      fpCam.updateView = function() {
+        _origUpdateView();
+        var m = fpCam.viewMatrix.elements;
+        m[0] = -m[0]; m[1] = -m[1]; m[2] = -m[2];
+        m[4] = -m[4]; m[5] = -m[5]; m[6] = -m[6];
+      };
+    }
+  }
+
   /* ── Auto-detect alignment angle from floor matrixWorld ──────────────
    * Replicates app.js's formula: (180 * atan2(b.x, b.z)) / PI
    * where b = world-space Z-axis of FloorPlanController.floors[0].
