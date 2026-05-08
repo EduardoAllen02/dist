@@ -165,18 +165,21 @@ window.player.ready(function() {
   var GCV     = api.Common.getBowels().GCV;
   var skipPre = false;
 
-  function applyFloorPlanRotation() {
+  function applyFloorPlanRotation(attempts) {
+    attempts = attempts || 0;
     var tourId = new URLSearchParams(window.location.search).get('tour');
     var label  = FLOOR_TOUR_MAP[tourId];
     if (!label || ROTATED_FLOORS.indexOf(label) === -1) return;
     var fpc = GCV.FloorPlanController;
     if (fpc && fpc.floors && fpc.floors.length) {
-      fpc.floors[0].rotation.y = Math.PI;
-      if (typeof fpc.floors[0].updateMatrixWorld === 'function') {
-        fpc.floors[0].updateMatrixWorld(true);
-      }
-    } else {
-      setTimeout(applyFloorPlanRotation, 200);
+      fpc.floors[0].children.forEach(function(child) {
+        child.rotation.y += Math.PI;
+        if (typeof child.updateMatrixWorld === 'function') {
+          child.updateMatrixWorld(true);
+        }
+      });
+    } else if (attempts < 30) {
+      setTimeout(function() { applyFloorPlanRotation(attempts + 1); }, 200);
     }
   }
   applyFloorPlanRotation();
